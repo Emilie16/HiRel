@@ -1,8 +1,9 @@
 Documentation:
 	Choix du capteur			:	OK
-	Schéma bloc de la chaîne de mesure	:	
-	Analyse des performances attendues	:	
-	Schéma électrique			:	
-	Budget de la chaîne de mesure		:	
-	Dissipation de chaleur			:	
-	FMECA					:	
+	Schéma bloc de la chaîne de mesure	:	OK
+	Analyse des performances attendues	:	Yann
+	Schéma électrique			:	Yann
+	Budget de la chaîne de mesure		:	Emilie
+	Dissipation de chaleur			:	Emilie	
+	FMECA					:	Yann
+	Analyse Monté-Carlo			:	Emilie	
