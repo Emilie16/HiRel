@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.1.1">
-  <zoom_level>8</zoom_level>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>448</x>
-      <y>152</y>
-      <w>128</w>
-      <h>64</h>
+      <x>230</x>
+      <y>90</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Power supply
 (USB or Battery)
@@ -18,10 +18,10 @@ valign=center</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>464</x>
-      <y>448</y>
-      <w>128</w>
-      <h>64</h>
+      <x>250</x>
+      <y>480</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Current measure
 halign=center
@@ -31,10 +31,10 @@ valign=center</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>800</x>
-      <y>448</y>
-      <w>128</w>
-      <h>64</h>
+      <x>670</x>
+      <y>480</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Analog to digital
 conversion
@@ -46,10 +46,10 @@ valign=center</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>304</y>
-      <w>680</w>
-      <h>272</h>
+      <x>150</x>
+      <y>300</y>
+      <w>850</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>lt=.
 Slave sensor board
@@ -59,10 +59,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>112</y>
-      <w>424</w>
-      <h>144</h>
+      <x>150</x>
+      <y>40</y>
+      <w>530</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=.
 Slave power board
@@ -72,24 +72,24 @@ halign=left</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>464</y>
-      <w>232</w>
-      <h>40</h>
+      <x>400</x>
+      <y>500</y>
+      <w>290</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..5V
-Transform current to voltage
+Current measurement
 fg=blue</panel_attributes>
     <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>616</x>
-      <y>336</y>
-      <w>128</w>
-      <h>64</h>
+      <x>440</x>
+      <y>340</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Reference voltage
 halign=center
@@ -99,37 +99,37 @@ valign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>392</y>
-      <w>184</w>
-      <h>72</h>
+      <x>510</x>
+      <y>410</y>
+      <w>230</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=5V
 Stable analogic supply
 fg=orange</panel_attributes>
-    <additional_attributes>200.0;70.0;200.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>200.0;70.0;200.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>552</x>
-      <y>416</y>
-      <w>144</w>
-      <h>48</h>
+      <x>360</x>
+      <y>430</y>
+      <w>180</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=5V
 fg=orange</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>384</x>
-      <y>616</y>
-      <w>328</w>
-      <h>192</h>
+      <x>150</x>
+      <y>690</y>
+      <w>410</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=.
 Master FPAG
@@ -139,10 +139,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>712</x>
-      <y>616</y>
-      <w>352</w>
-      <h>192</h>
+      <x>560</x>
+      <y>690</y>
+      <w>440</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=.
 Slave XBee
@@ -152,10 +152,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>808</x>
-      <y>112</y>
-      <w>256</w>
-      <h>144</h>
+      <x>680</x>
+      <y>40</y>
+      <w>320</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=.
 Slave Gumstix
@@ -165,10 +165,10 @@ halign=left</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>152</y>
-      <w>128</w>
-      <h>64</h>
+      <x>470</x>
+      <y>90</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>DC/DC converter
 halign=center
@@ -178,10 +178,10 @@ valign=center</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>888</x>
-      <y>152</y>
-      <w>128</w>
-      <h>64</h>
+      <x>780</x>
+      <y>90</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Micro USB
 halign=center
@@ -191,23 +191,23 @@ valign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>208</y>
-      <w>48</w>
-      <h>256</h>
+      <x>300</x>
+      <y>160</y>
+      <w>60</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=5V IN
 fg=red</panel_attributes>
-    <additional_attributes>10.0;300.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>208</y>
-      <w>472</w>
-      <h>80</h>
+      <x>300</x>
+      <y>160</y>
+      <w>590</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-
 fg=red</panel_attributes>
@@ -216,10 +216,10 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>176</y>
-      <w>144</w>
-      <h>32</h>
+      <x>620</x>
+      <y>120</y>
+      <w>180</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=3.3V
@@ -229,23 +229,23 @@ fg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>776</x>
-      <y>80</y>
-      <w>344</w>
-      <h>600</h>
+      <x>640</x>
+      <y>0</y>
+      <w>430</w>
+      <h>770</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=3.3V
 fg=magenta</panel_attributes>
-    <additional_attributes>290.0;730.0;290.0;650.0;410.0;650.0;410.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>290.0;750.0;290.0;670.0;410.0;670.0;410.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>592</y>
-      <w>368</w>
-      <h>88</h>
+      <x>490</x>
+      <y>660</y>
+      <w>460</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=3.3V
@@ -255,24 +255,24 @@ fg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>512</x>
-      <y>504</y>
-      <w>368</w>
-      <h>176</h>
+      <x>310</x>
+      <y>550</y>
+      <w>460</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 Digital output
 (SPI)
-fg=blue</panel_attributes>
+fg=#3c7a00</panel_attributes>
     <additional_attributes>10.0;200.0;10.0;60.0;440.0;60.0;440.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>472</y>
-      <w>168</w>
-      <h>32</h>
+      <x>60</x>
+      <y>510</y>
+      <w>210</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=5V OUT
@@ -282,27 +282,119 @@ fg=#b0649a</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>80</y>
-      <w>416</w>
-      <h>416</h>
+      <x>60</x>
+      <y>0</y>
+      <w>520</w>
+      <h>540</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=5V
 fg=#b0649a</panel_attributes>
-    <additional_attributes>490.0;90.0;490.0;10.0;10.0;10.0;10.0;500.0</additional_attributes>
+    <additional_attributes>490.0;90.0;490.0;10.0;10.0;10.0;10.0;520.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>280</y>
-      <w>400</w>
-      <h>72</h>
+      <x>60</x>
+      <y>270</y>
+      <w>500</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=5V
 fg=#b0649a</panel_attributes>
     <additional_attributes>470.0;70.0;470.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>250</y>
+      <w>640</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=5V
+Voltage measurement
+fg=red</panel_attributes>
+    <additional_attributes>480.0;230.0;480.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>60</x>
+      <y>270</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+fg=#b0649a
+bg=#b0649a</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>300</x>
+      <y>230</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+fg=red
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>300</x>
+      <y>250</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+fg=red
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>640</x>
+      <y>120</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+fg=magenta
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>510</x>
+      <y>430</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+fg=orange
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>920</x>
+      <y>660</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=initial
+bg=magenta
+fg=magenta</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
