@@ -7,3 +7,4 @@ Documentation:
 	Dissipation de chaleur			:	Emilie	
 	FMECA					:	Yann
 	Analyse Monté-Carlo			:	Emilie	
+	Analyse de stress des composants (PSA)	:
