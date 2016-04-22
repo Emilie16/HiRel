@@ -3,8 +3,10 @@ Documentation:
 	Schéma bloc de la chaîne de mesure	:	OK
 	Analyse des performances attendues	:	Yann
 	Schéma électrique			:	Yann
-	Budget de la chaîne de mesure		:	Emilie
+	Budget de la chaîne de mesure		:	OK
 	Dissipation de chaleur			:	Emilie	
 	FMECA					:	Yann
-	Analyse Monté-Carlo			:	Emilie	
-	Analyse de stress des composants (PSA)	:
+	Analyse Monté-Carlo			:	OK	
+	Analyse de stress des composants (PSA)	:	Yann
+	Routage					:	Yann
+	Simulation VHDL				:	Emilie
