@@ -1,0 +1,48 @@
+DESIGN ahb@timer_tester
+VIEW interface
+NO_GRAPHIC 0
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 50,0 8 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 13,0 15 1 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 233,0 19 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 248,0 20 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 253,0 21 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 263,0 22 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 238,0 23 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 243,0 24 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 258,0 25 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 268,0 26 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 273,0 27 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 278,0 28 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 283,0 29 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 1,0 32 0 
+DESIGN ahb@timer_tester
+VIEW interface
+GRAPHIC 1,0 33 0 

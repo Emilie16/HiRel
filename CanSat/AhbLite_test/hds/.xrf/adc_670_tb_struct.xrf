@@ -1,0 +1,164 @@
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 0
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 142,0 9 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 12
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 0,0 15 2 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1,0 18 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 18
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1269,0 21 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1293,0 22 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1301,0 23 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1309,0 24 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1277,0 25 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1285,0 26 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1261,0 27 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1253,0 28 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1245,0 29 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 30
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 31
+LIBRARY AhbLite_test
+DESIGN @a@d@c_670
+VIEW sim
+GRAPHIC 1412,0 33 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 67,0 35 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 182,0 36 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 72,0 37 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 187,0 38 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 77,0 39 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 82,0 40 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 177,0 41 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 197,0 42 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 192,0 43 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 421,0 46 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1311,0 48 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1263,0 49 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1271,0 50 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1295,0 51 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1303,0 52 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1279,0 53 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1287,0 54 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1255,0 55 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1247,0 56 0 
+LIBRARY AhbLite_test
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 59
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1412,0 62 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 421,0 63 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 66
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 68
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1412,0 70 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1271,0 72 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1295,0 73 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1303,0 74 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1279,0 75 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1287,0 76 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1255,0 77 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1247,0 78 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1311,0 79 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 1263,0 80 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+GRAPHIC 421,0 82 0 
+DESIGN @a@d@c_670_tb
+VIEW struct.bd
+NO_GRAPHIC 95

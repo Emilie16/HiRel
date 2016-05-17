@@ -1,0 +1,189 @@
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 0
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 187,0 9 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 12
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 0,0 16 2 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 1,0 19 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 19
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11087,0 28 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11151,0 29 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11135,0 30 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11143,0 31 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11095,0 32 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11111,0 33 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11103,0 34 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11127,0 35 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11079,0 36 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11119,0 37 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 38
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 39
+LIBRARY NanoBlaze
+DESIGN nano@blaze
+VIEW struct
+GRAPHIC 11949,0 41 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 14,0 42 1 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 52,0 51 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 2043,0 52 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 502,0 53 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 1998,0 54 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 248,0 55 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 2003,0 56 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 2008,0 57 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 1163,0 58 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 469,0 59 0 
+DESIGN nano@blaze
+VIEW symbol.sb
+GRAPHIC 479,0 60 0 
+LIBRARY NanoBlaze_test
+DESIGN nano@blaze_tester
+VIEW test
+GRAPHIC 1774,0 63 0 
+DESIGN nano@blaze_tester
+VIEW interface
+GRAPHIC 14,0 64 1 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11153,0 69 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11145,0 70 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11105,0 71 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11129,0 72 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11121,0 73 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11089,0 74 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11137,0 75 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11097,0 76 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11113,0 77 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11081,0 78 0 
+LIBRARY NanoBlaze_test
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 81
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11949,0 84 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 1774,0 85 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 88
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 90
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11949,0 92 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11956,0 93 1 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11089,0 102 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11137,0 103 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11097,0 104 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11113,0 105 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11081,0 106 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11153,0 107 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11145,0 108 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11105,0 109 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11129,0 110 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 11121,0 111 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 1774,0 113 0 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+GRAPHIC 1781,0 114 1 
+DESIGN nano@blaze_tb
+VIEW struct.bd
+NO_GRAPHIC 131

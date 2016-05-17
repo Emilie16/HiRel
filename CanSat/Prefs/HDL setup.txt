@@ -1,0 +1,79 @@
+Batch file
+  set DESIGN_NAME=nanoBlaze
+  set HDS_PROJECT_DIR=%CD%
+  set HDS_LIBS_DIR=%HDS_PROJECT_DIR%\..\Libs
+  set ISE_WORK_DIR=Board\ise
+  set SIMULATION_DIR=%HDS_PROJECT_DIR:\=/%/Simulation
+  set SCRATCH_DIR=%USERPROFILE:C:\Documents and Settings=D:\Temp\EDA%
+  set HDS_LIBS=%HDS_PROJECT_DIR%\Prefs\hds.hdp
+  set HDS_USER_HOME=%HDS_PROJECT_DIR%\Prefs\hds_user
+  set HDS_TEAM_HOME=%HDS_PROJECT_DIR%\Prefs\hds_team
+  set HDS_HOME=C:\eda\HDS
+  set MODELSIM_HOME=C:\eda\Modelsim
+  set ISE_HOME=C:\eda\Xilinx\ISE_DS
+
+Options / Main / User Variables
+  asm_file         : nanoTest.asm
+  concat_file      : concatenated
+  designName       : $DESIGN_NAME
+  task_AsmPath     : $HDS_LIBS_DIR\NanoBlaze\hdl
+  task_HDSPath     : $HDS_HOME
+  task_ISEBinPath  : $ISE_HOME
+  task_ISEPath     : $SCRATCH_DIR\$DESIGN_NAME\$ISE_WORK_DIR
+  task_ModelSimPath: $MODELSIM_HOME\win32
+
+Copy trimLibs.pl in the concat directory
+Copy update_ise.pl in the ise directory
+
+Tasks
+
+Assemble code
+  Tool name        : Assemble code
+  Tooltip          : run assembler to generate VHDL ROM description
+  Bitmap           : .../HDS/resources/bitmaps/tools/tool_compile.bmp
+  Tool does:       : Invoke a Program or run a Shell Script
+  Command          : %(task_HDSPath)\resources\perl\bin\perl.exe
+  Arguments        : %(task_AsmPath)\nanoasm.pl -v -d 16 -k %(asm_file) rom_%(view).vhd
+  Initial Directory: %(HDLDir)
+  Capture Output
+
+Trim libraries
+  Tool name        : Trim libraries
+  Tooltip          : comment out library declarations for singles file
+  Tool does:       : Invoke a Program or run a Shell Script
+  Command          : %(task_HDSPath)\resources\perl\bin\perl.exe
+  Arguments        : trimlibs.pl %(concat_file).vhd
+  Initial Directory: %(library_downstream_Concatenation)
+  Capture Output
+
+Prepare for Synthesis
+  Tool name        : Prepare for synthesis
+  Tooltip          : Generate a single file VHDL
+  Generate
+  Concatenate HDL
+  Trim libraries
+
+Xilinx Project Navigator (flow)
+  Flow name : Xilinx Project Navigator
+  Tooltip   : Xilinx Flow
+  Bitmap    : tools/tool_xilinx_synthesis.bmp
+  Update.xise
+  Xilinx Project Navigator
+
+Xilinx ISE (launch)
+  Tool name        : Xilinx ISE tool
+  Tooltip          : Invokes the Xilinx ISE tool
+  Tool does:       : Invoke a Program or run a Shell Script
+  Command          : %(task_ISEBinPath)\ISE\bin\nt\ise.exe
+  Arguments        : %(designName).xise
+  Initial Directory: %(task_ISEPath)
+
+Update ISE Path
+  Tool name        : Update.xise
+  Tooltip          : Update file references in the Xilnx project .xise file
+  Tool does:       : Invoke a Program or run a Shell Script
+  Command          : %(task_HDSPath)\resources\perl\bin\perl.exe
+  Arguments        : %(task_ISEPath)\update_ise.pl %(task_ISEPath)\%(designName).xise
+  Initial Directory: 
+  Capture Output
+  

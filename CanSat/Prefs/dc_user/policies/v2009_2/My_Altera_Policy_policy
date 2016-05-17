@@ -1,0 +1,11 @@
+version "7.1"
+Policy (Policy
+name "My_Altera_Policy"
+build "DesignChecker 2009.2 (Build 10) 
+Built on Wed Mar 3 2010 at 23:40"
+RuleSets [
+"Altera"
+]
+DisabledConfiguredRules [
+]
+)

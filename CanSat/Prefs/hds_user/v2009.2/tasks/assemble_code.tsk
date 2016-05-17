@@ -1,0 +1,39 @@
+version "1.1"
+HDSTool (HDSTool
+hasAssociatedFileExt 0
+associatedFileExt ""
+TaskName "Assemble code"
+bitmap "C:\\EDA\\HDS\\resources\\bitmaps\\tools\\tool_compile.bmp"
+hasBitmap 1
+tooltip "run assembler to generate VHDL ROM description"
+taskSettings [
+"InternalTaskSetting"
+(SettingsMap
+settingsMap [
+"additionalToolArgs"
+"%(task_AsmPath)\\nanoasm.pl -v -d 16 -k -z %(asm_file) rom_%(view).vhd "
+"captureOutput"
+"1"
+"customPrompt"
+""
+"initialDir"
+"%(HDLDir)"
+"promptForRunSettings"
+"0"
+"runnableObject"
+"%(task_HDSPath)\\resources\\perl\\bin\\perl.exe"
+"runnableObjectType"
+"executable"
+"useViewSpecific"
+"0"
+]
+)
+]
+PreferedTasks [
+]
+onShortcutBar 0
+onPulldownMenu 1
+onToolbar 1
+enabled 1
+hierDepth 3
+)

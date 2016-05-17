@@ -1,0 +1,12 @@
+DESIGN test@utils_tb
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN test@utils_tb
+VIEW symbol.sb
+GRAPHIC 18,0 8 0 
+DESIGN test@utils_tb
+VIEW symbol.sb
+GRAPHIC 1,0 13 0 
+DESIGN test@utils_tb
+VIEW symbol.sb
+GRAPHIC 1,0 14 0 

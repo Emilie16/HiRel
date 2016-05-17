@@ -1,0 +1,69 @@
+[Concat]
+AhbLiteComponents_test = $HDS_LIBS_DIR/AhbLiteComponents_test/concat
+Board = $HDS_PROJECT_DIR/../Board/concat
+CanSat = $HDS_PROJECT_DIR/../CanSat/concat
+[ModelSim]
+AhbLite = $SCRATCH_DIR/$DESIGN_NAME/AhbLite/work
+AhbLite_test = $SCRATCH_DIR/$DESIGN_NAME/AhbLite_test/work
+AhbLiteComponents = $SCRATCH_DIR/$DESIGN_NAME/AhbLiteComponents/work
+AhbLiteComponents_test = $SCRATCH_DIR/$DESIGN_NAME/AhbLiteComponents_test/work
+Board = $SCRATCH_DIR/$DESIGN_NAME/Board/work
+CanSat = $SCRATCH_DIR/$DESIGN_NAME/CanSat/work
+CanSat_studentDesigns = $SCRATCH_DIR/$DESIGN_NAME/CanSat_studentDesigns/work
+CanSat_test = $SCRATCH_DIR/$DESIGN_NAME/CanSat_test/work
+Common = $SCRATCH_DIR/$DESIGN_NAME/Common/work
+Common_test = $SCRATCH_DIR/$DESIGN_NAME/Common_test/work
+Memory = $SCRATCH_DIR/$DESIGN_NAME/Memory/work
+Memory_test = $SCRATCH_DIR/$DESIGN_NAME/Memory_test/work
+NanoBlaze = $SCRATCH_DIR/$DESIGN_NAME/NanoBlaze/work
+NanoBlaze_test = $SCRATCH_DIR/$DESIGN_NAME/NanoBlaze_test/work
+SPI = $SCRATCH_DIR/$DESIGN_NAME/SPI/work
+SPI_test = $SCRATCH_DIR/$DESIGN_NAME/SPI_test/work
+unisim = $ISE_HOME\ISE\vhdl\unisim\work
+[hdl]
+AhbLite = $HDS_LIBS_DIR/AhbLite/hdl
+AhbLite_test = $HDS_LIBS_DIR/AhbLite_test/hdl
+AhbLiteComponents = $HDS_LIBS_DIR/AhbLiteComponents/hdl
+AhbLiteComponents_test = $HDS_LIBS_DIR/AhbLiteComponents_test/hdl
+Board = $HDS_PROJECT_DIR/../Board/hdl
+CanSat = $HDS_PROJECT_DIR/../CanSat/hdl
+CanSat_studentDesigns = $HDS_PROJECT_DIR/../CanSat_studentDesigns/hdl
+CanSat_test = $HDS_PROJECT_DIR/../CanSat_test/hdl
+Common = $HDS_LIBS_DIR/Common/hdl
+Common_test = $HDS_LIBS_DIR/Common_test/hdl
+ieee = $HDS_HOME/hdl_libs/ieee/hdl
+Memory = $HDS_LIBS_DIR/Memory/hdl
+Memory_test = $HDS_LIBS_DIR/Memory_test/hdl
+NanoBlaze = $HDS_LIBS_DIR/NanoBlaze/hdl
+NanoBlaze_test = $HDS_LIBS_DIR/NanoBlaze_test/hdl
+SPI = $HDS_LIBS_DIR/SPI/hdl
+SPI_test = $HDS_LIBS_DIR/SPI_test/hdl
+std = $HDS_HOME/hdl_libs/std/hdl
+unisim = $ISE_HOME/ISE/vhdl/src/unisims
+[hds]
+AhbLite = $HDS_LIBS_DIR/AhbLite/hds
+AhbLite_test = $HDS_LIBS_DIR/AhbLite_test/hds
+AhbLiteComponents = $HDS_LIBS_DIR/AhbLiteComponents/hds
+AhbLiteComponents_test = $HDS_LIBS_DIR/AhbLiteComponents_test/hds
+Board = $HDS_PROJECT_DIR/../Board/hds
+CanSat = $HDS_PROJECT_DIR/../CanSat/hds
+CanSat_studentDesigns = $HDS_PROJECT_DIR/../CanSat_studentDesigns/hds
+CanSat_test = $HDS_PROJECT_DIR/../CanSat_test/hds
+Common = $HDS_LIBS_DIR/Common/hds
+Common_test = $HDS_LIBS_DIR/Common_test/hds
+ieee = $HDS_HOME/hdl_libs/ieee/hds
+Memory = $HDS_LIBS_DIR/Memory/hds
+Memory_test = $HDS_LIBS_DIR/Memory_test/hds
+NanoBlaze = $HDS_LIBS_DIR/NanoBlaze/hds
+NanoBlaze_test = $HDS_LIBS_DIR/NanoBlaze_test/hds
+SPI = $HDS_LIBS_DIR/SPI/hds
+SPI_test = $HDS_LIBS_DIR/SPI_test/hds
+std = $HDS_HOME/hdl_libs/std/hds
+[hds_settings]
+design_root = .()
+[library_type]
+Board = regular
+ieee = standard
+std = standard
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

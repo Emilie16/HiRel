@@ -1,0 +1,2466 @@
+version "7.1"
+EngineDLLVersion "5.0"
+TopRuleSet (RuleSet
+name "Essentials"
+build "DesignChecker 2009.2 (Build 10) 
+Built on Wed Mar 3 2010 at 23:40"
+UserDefinedSeverity "Default SeveritySet"
+SeverityClassDefinition (SeverityClass
+SeverityClassName "Default SeveritySet"
+SeverityLevels [
+(SeverityLevel
+LevelName "Error"
+Red 255
+Green 0
+Blue 0
+Score 5
+Weight 2
+)
+(SeverityLevel
+LevelName "Warning"
+Red 0
+Green 0
+Blue 255
+Score 2
+Weight 1
+)
+(SeverityLevel
+LevelName "Note"
+Red 0
+Green 255
+Blue 0
+Score 1
+Weight 1
+)
+]
+)
+RuleSets [
+(RuleSet
+name "Coding Practices"
+UserDefinedSeverity "Default SeveritySet"
+SeverityClassDefinition (SeverityClass
+SeverityClassName "Default SeveritySet"
+SeverityLevels [
+(SeverityLevel
+LevelName "Error"
+Red 255
+Green 0
+Blue 0
+Score 5
+Weight 2
+)
+(SeverityLevel
+LevelName "Warning"
+Red 0
+Green 0
+Blue 255
+Score 2
+Weight 1
+)
+(SeverityLevel
+LevelName "Note"
+Red 0
+Green 255
+Blue 0
+Score 1
+Weight 1
+)
+]
+)
+RuleSets [
+]
+Rules [
+(ConfiguredRule
+BaseRuleName "Unknown Objects"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unknown Objects"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Objects must be declared before being used."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for objects which are used, but have not been declared."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"unknown"
+"objects"
+"identifiers"
+"dependencies"
+]
+)
+(Params
+ParamName "Detect"
+ParamValues [
+"<all>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Unused Declarations"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unused Declarations"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"The object has been declared but not used (read from or assigned to)."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for objects which have been declared, but are never used."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"unused"
+"declarations"
+"unread"
+"unwritten"
+"uncalled"
+"identifiers"
+]
+)
+(Params
+ParamName "Detect"
+ParamValues [
+"Identifiers: Read but not Written"
+"Identifiers: Written but not Read"
+"Identifiers: Neither Read nor Written"
+"Generics: Not Used"
+"Functions: Not Called"
+"Procedures: Not Called"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Unassigned Objects"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unassigned Objects"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Objects should be assigned values before they are used."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks objects are assigned values before they are used."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"unassigned"
+"objects"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Unconnected Ports"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unconnected Ports"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"All output ports should be connected. All input ports should be driven by another signal or constant '0 or '1' value."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that input and/or output ports are connected."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"unconnected"
+"ports"
+"input"
+"output"
+"bi-directional"
+]
+)
+(Params
+ParamName "Detect"
+ParamValues [
+"All Unconnected Ports"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Gated Clocks"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Gated Clocks"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid gated clocks."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of gated clocks."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"clocks"
+"gated"
+"gating"
+"synchronous"
+"enable"
+"load"
+"register"
+]
+)
+(Params
+ParamName "Ignore"
+ParamValues [
+"<don't care>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Internally Generated Clocks"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Internally Generated Clocks"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Internally generated clocks should be isolated at the top-level."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks any internally generated clocks are isolated at the top-level."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"clocks"
+"generated"
+"internally"
+"isolation"
+"isolated"
+]
+)
+(Params
+ParamName "Action"
+ParamValues [
+"Allow if isolated at Top-Level"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Internally Generated Resets"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Internally Generated Resets"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Internally generated resets should be isolated at the top-level."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks any internally generated resets are isolated at the top-level."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"asynchronous"
+"generated"
+"internally"
+"isolation"
+"isolated"
+"resets"
+"synchronous"
+"style"
+]
+)
+(Params
+ParamName "Action"
+ParamValues [
+"Allow if isolated at Top-Level"
+]
+)
+(Params
+ParamName "Reset Style"
+ParamValues [
+"<don't care>"
+]
+)
+(Params
+ParamName "Ignore"
+ParamValues [
+"<don't care>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Mixed Clocks Resets"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Mixed Clocks Resets"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Do not use the same signal as a clock and reset."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for signals being used as both clock and reset."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"clocks"
+"mixed"
+"resets"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Consistent Resets"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Consistent Resets"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Do not use the same reset signal with mixed styles or polarities within the same process/block."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks the reset signal is used consistently."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"asynchronous"
+"consistent"
+"mixed"
+"polarity"
+"resets"
+"synchronous"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Disallow"
+ParamValues [
+"Mixed Synchronous/Asynchronous Styles"
+"Mixed Polarities"
+]
+)
+(Params
+ParamName "Hierarchy Level"
+ParamValues [
+"Process"
+]
+)
+(Params
+ParamName "Applies To"
+ParamValues [
+"FSM State Variable Registers"
+"Other Registers"
+]
+)
+(Params
+ParamName "Consistency"
+ParamValues [
+"Single Reset"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Multiple Drivers"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Multiple Drivers"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Do not assign to the same signal/variable in more than one sequential block."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for multiple drivers."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"drivers"
+"multiple"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Matching Range"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Matching Range"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Ensure bit widths on both sides of an assignment/comparison match. Ensure Port & Net declarations match."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for compatible bit widths."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"assignments"
+"associations"
+"comparisons"
+"declarations"
+"explicit"
+"port"
+"net"
+"widths"
+"out-of-boud"
+"index"
+]
+)
+(Params
+ParamName "Match"
+ParamValues [
+"Explicit Widths in Assignments"
+"Operands of comparison operators"
+"Explicit Widths in Associations"
+"Port & Net Declarations"
+]
+)
+(Params
+ParamName "Ignore"
+ParamValues [
+"<none>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "FSM Transitions"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"FSM Transitions"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Ensure unused states transition directly to the initialization state."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that unused states can transition to a recovery state and that all states transition to a known state."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"FSM"
+"states"
+"transitions"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Detect"
+ParamValues [
+"Transitions Without Default Handling"
+"States Without Incoming Transitions"
+"States Without Outgoing Transitions"
+]
+)
+(Params
+ParamName "State Variables"
+ParamValues [
+"<don't care>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Logical and Bitwise Operators"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Logical and Bitwise Operators"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Use logical and bit-wise operators correctly."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the correct usage of Verilog logical and bit-wise operators."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"bitwise"
+"logical"
+"operators"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Sub-Program Body"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Sub-Program Body"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Ensure the sub-program has only one exit point and is not recursive."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks if the sub-program has a single exit point and is not recursive."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"subprogram"
+"functions"
+"procedures"
+"local"
+"variables"
+"non-local"
+]
+)
+(Params
+ParamName "Sub-Program"
+ParamValues [
+"Functions"
+"Procedures / Tasks"
+]
+)
+(Params
+ParamName "Allow Assign To"
+ParamValues [
+"<don't care>"
+]
+)
+(Params
+ParamName "Disallow"
+ParamValues [
+"Multiple exit points/return statements"
+"Missing exit point/return statement"
+"Recursion"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Unique Names"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unique Names"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Use unique FSM states names throughout the design."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that FSM states names are unique throughout the design."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"names"
+"unique"
+"FSM"
+"instance"
+]
+)
+(Params
+ParamName "Unique"
+ParamValues [
+"FSM state names"
+]
+)
+]
+)
+]
+)
+(RuleSet
+name "Downstream Checks"
+UserDefinedSeverity "Default SeveritySet"
+SeverityClassDefinition (SeverityClass
+SeverityClassName "Default SeveritySet"
+SeverityLevels [
+(SeverityLevel
+LevelName "Error"
+Red 255
+Green 0
+Blue 0
+Score 5
+Weight 2
+)
+(SeverityLevel
+LevelName "Warning"
+Red 0
+Green 0
+Blue 255
+Score 2
+Weight 1
+)
+(SeverityLevel
+LevelName "Note"
+Red 0
+Green 255
+Blue 0
+Score 1
+Weight 1
+)
+]
+)
+RuleSets [
+]
+Rules [
+(ConfiguredRule
+BaseRuleName "Sensitivity List"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Sensitivity List"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Sensitivity list should contain only the signals needed by the process/block."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that sensitivity lists are complete and do not include unnecessary signals."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"missing"
+"sensitivity"
+"sliced"
+"unneeded"
+]
+)
+(Params
+ParamName "Check For"
+ParamValues [
+"Missing Signals"
+"Unneeded Signals"
+"Sliced Signals"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Unsynthesizable Event Controls"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Unsynthesizable Event Controls"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid the use of non-synthesizable Event Controls."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for unsynthesizable event controls in sensitivity lists."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"synthesizable"
+"event"
+"controls"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Clock Used As Data"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Clock Used As Data"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid using clock signals as data."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for clock signals being used as data."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"clock"
+"condition"
+"data"
+"race"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Check"
+ParamValues [
+"Clock used as data internal to design"
+"Clock driving top-level output port"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Latch Inference"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Latch Inference"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid latch inference."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the possible inference of latches."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"latch"
+"inference"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Register IO"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Register IO"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"All outputs of each process/block of a hierarchical design should be registered."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that process/block and FSM output ports are registered."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"register"
+"input"
+"output"
+"IO"
+]
+)
+(Params
+ParamName "Applies To"
+ParamValues [
+"Sub-Blocks"
+]
+)
+(Params
+ParamName "Applies To Non-Clocked Blocks"
+ParamValues [
+"No"
+]
+)
+(Params
+ParamName "Check Inputs"
+ParamValues [
+"<none>"
+]
+)
+(Params
+ParamName "Check Outputs"
+ParamValues [
+"All Outputs"
+]
+)
+(Params
+ParamName "Check Asynchronous Controls"
+ParamValues [
+"No"
+]
+)
+(Params
+ParamName "Treat Latches as Registers"
+ParamValues [
+"Yes"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Eliminate Glue Logic"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Eliminate Glue Logic"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Ensure Verilog built-in primitives are isolated into separate modules."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks any instances of Verilog built-in primitives and UDPs are isolated into separate modules."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"glue-logic"
+"eliminate"
+"UDPs"
+"Primitives"
+]
+)
+(Params
+ParamName "Logic Type"
+ParamValues [
+"Primitives"
+"UDPs"
+]
+)
+(Params
+ParamName "Hierarchy Level"
+ParamValues [
+"Top-Level"
+]
+)
+(Params
+ParamName "Isolation"
+ParamValues [
+"Isolate Gates in Separate Modules"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Initialization Assignments"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Initialization Assignments"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid using default initialization."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of initialization assignments rather than explicit resets."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"assignments"
+"initializations"
+]
+)
+(Params
+ParamName "Check"
+ParamValues [
+"Combinationally driven output ports"
+"All signals/variables"
+"Initial blocks"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Allowed Constructs"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Non Synthesizable Constructs"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid constructs which make the code  non-synthesizable."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of non-synthesizable language constructs (except delays)"
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"allowed"
+"constructs"
+"non-portable"
+"non-synthesizable"
+"portable"
+"synthesizable"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Disallowed Constructs"
+ParamValues [
+"Functions Returning Type Real"
+"while Loops"
+"Multiple Wait Statements on Same Clock"
+"Real Types"
+"Zero Delayed Assignments"
+"Incomplete Types"
+"Infinite Loops"
+"Global Signals"
+"ALIAS"
+"BUFFER"
+"Enumeration Type as Array Index"
+"FILE"
+"INERTIAL Delay"
+"POSTPONED"
+"PURE FUNCTION"
+"TRANSPORT Delay"
+"VARIABLE"
+"WAIT"
+"WAIT with Timeout"
+"`timescale"
+"Array of Integers"
+"casex"
+"casez"
+"deassign"
+"defparam"
+"event"
+"force"
+"fork join"
+"Hierarchical Names"
+"initial Blocks"
+"Net Strengths"
+"Procedural Continuous assign"
+"forever Loops"
+"repeat Loops"
+"release"
+"specify"
+"String Literals"
+"System Functions"
+"System Tasks"
+"$finish"
+"$stop"
+"time"
+"User Defined Primitives"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Untested Edge Trigger"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Untested Edge Trigger"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Synthesis requires a single, untested edge trigger in order to identify the clock."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for a single untested edge trigger in Verilog event control logic."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"edge"
+"triggers"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Constrained Ranges & Bounds"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Constrained Ranges & Bounds"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"VHDL Integer, and Real number types must have ranges. Vector types must have bounds"
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that all VHDL numbers have specified ranges and all vectors have specified bounds."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"bounds"
+"constrained"
+"ranges"
+"vector"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Applies To"
+ParamValues [
+"<all>"
+]
+)
+(Params
+ParamName "Range / Bound"
+ParamValues [
+"<all>"
+]
+)
+(Params
+ParamName "Range Type"
+ParamValues [
+"<don't care>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Asynchronous Block"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Asynchronous Block"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Asynchronous always block contains more than one sequential statement, this may be not synthesizable"
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks the synthesizability of asynchronous Verilog always blocks."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"asynchronous"
+"block"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Detect"
+ParamValues [
+"<all>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Allowed Operators"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Non Synthesizable Operators"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Do not use disallowed operators."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for disallowed operators usage."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"Operators"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Scope"
+ParamValues [
+"<Design Units>"
+"<Subprograms>"
+"<Blocks>"
+]
+)
+(Params
+ParamName "Disallowed Operators"
+ParamValues [
+"Case Equality ( === )"
+"Case Inequality ( !== )"
+]
+)
+]
+)
+]
+)
+(RuleSet
+name "Code Reuse"
+UserDefinedSeverity "Default SeveritySet"
+SeverityClassDefinition (SeverityClass
+SeverityClassName "Default SeveritySet"
+SeverityLevels [
+(SeverityLevel
+LevelName "Error"
+Red 255
+Green 0
+Blue 0
+Score 5
+Weight 2
+)
+(SeverityLevel
+LevelName "Warning"
+Red 0
+Green 0
+Blue 255
+Score 2
+Weight 1
+)
+(SeverityLevel
+LevelName "Note"
+Red 0
+Green 255
+Blue 0
+Score 1
+Weight 1
+)
+]
+)
+RuleSets [
+]
+Rules [
+(ConfiguredRule
+BaseRuleName "Allowed Constructs"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Non-Portable Constructs"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid constructs which make the code non-portable."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of non-portable language constructs."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"allowed"
+"constructs"
+"non-portable"
+"non-synthesizable"
+"portable"
+"synthesizable"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Disallowed Constructs"
+ParamValues [
+"<all non portable constructs>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Allowed Pragmas"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Allowed Pragmas"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid embedded, tool-specific pragmas/commands."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of pragmas other than translate_on/off, synthesis_on/off"
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"pragmas"
+"synthesis"
+]
+)
+(Params
+ParamName "Disallowed Pragmas"
+ParamValues [
+"Other Specific Pragmas"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Vector Order"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Vector Order"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Warning"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"1"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Ensure all vector dimensions are ordered high to low and the low index bound is 0."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks all vector dimensions are ordered high to low and the low index bound is 0."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"order"
+"vector"
+]
+)
+(Params
+ParamName "Style"
+ParamValues [
+"Descending"
+]
+)
+(Params
+ParamName "Applies To"
+ParamValues [
+"Vector Bounds"
+"Integer Range Constraints"
+"Real Range Constraints"
+"Array Bounds"
+]
+)
+(Params
+ParamName "Low Index Bound"
+ParamValues [
+"0"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "VITAL Port Types"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"VITAL Port Types"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Top level ports must use STD_LOGIC_1164 types only."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks that top-level ports use types from Std_Logic_1164 only."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"VITAL"
+"port"
+"type"
+]
+)
+(Params
+ParamName "Scalar Ports Types"
+ParamValues [
+"std_logic"
+"std_ulogic"
+"Any subtype of std_ulogic"
+]
+)
+(Params
+ParamName "Array Ports Types"
+ParamValues [
+"std_logic_vector"
+"std_ulogic_vector"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Allowed Constructs"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Reserved Words"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+"Verilog Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Avoid the use of VHDL reserved words in Verilog designs and vice-versa"
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks for the use of VHDL reserved words in Verilog and vice-versa"
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"allowed"
+"constructs"
+"non-portable"
+"non-synthesizable"
+"portable"
+"synthesizable"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Disallowed Constructs"
+ParamValues [
+"<Verilog reserved words in VHDL designs>"
+"<VHDL reserved words in Verilog designs>"
+]
+)
+]
+)
+(ConfiguredRule
+BaseRuleName "Allowed Types"
+UserDefinedSeverity "Default SeveritySet"
+Params [
+(Params
+ParamName "Name"
+ParamValues [
+"Use IEEE types only"
+]
+)
+(Params
+ParamName "Severity"
+ParamValues [
+"Error"
+]
+)
+(Params
+ParamName "Score"
+ParamValues [
+"5"
+]
+)
+(Params
+ParamName "Weight"
+ParamValues [
+"2"
+]
+)
+(Params
+ParamName "Language"
+ParamValues [
+"VHDL Any"
+]
+)
+(Params
+ParamName "Hint"
+ParamValues [
+"Use IEEE types only. Subtypes must be based on IEEE standard types."
+]
+)
+(Params
+ParamName "Short Description"
+ParamValues [
+"Checks all types are IEEE types or subtypes based on IEEE standard types."
+]
+)
+(Params
+ParamName "Keywords"
+ParamValues [
+"allowed"
+"enumeration"
+"IEEE"
+"types"
+"Verilog"
+"VHDL"
+]
+)
+(Params
+ParamName "Applies To"
+ParamValues [
+"<all>"
+]
+)
+(Params
+ParamName "Action"
+ParamValues [
+"Allow"
+]
+)
+(Params
+ParamName "Packages"
+ParamValues [
+"ieee.*"
+]
+)
+(Params
+ParamName "Types"
+ParamValues [
+"<IEEE Types>"
+]
+)
+(Params
+ParamName "Excluded Types"
+ParamValues [
+"FSM State Variables Enum Type"
+]
+)
+]
+)
+]
+)
+]
+Rules [
+]
+)
