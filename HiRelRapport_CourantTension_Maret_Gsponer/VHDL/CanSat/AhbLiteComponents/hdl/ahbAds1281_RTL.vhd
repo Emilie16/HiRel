@@ -48,6 +48,7 @@ ARCHITECTURE RTL OF ahbAds1282 IS
   constant statusRegisterId: natural := 2;
   constant adcDataAvailableId: natural := 0;
 	--EMG Modifs
+	constant adcFSMCorrectionId: natural := 1;
   constant adcCurrentRegisterIDLow: natural := 3;
 	constant adcCurrentRegisterIDHigh: natural := 4;
   constant adcVoltageRegisterIDLow: natural := 5;
@@ -114,22 +115,41 @@ ARCHITECTURE RTL OF ahbAds1282 IS
   --  waitSample,
   --  sendWakeup, waitDataReady, startRead, waitRead, reading, sendStandby
   --);
-	type hamming_stateType is array(6 downto 0) of bit;
-	type hamming_parityType is array(2 downto 0) of bit;
-	type hamming_dataType is array (3 downto 0) of bit;
+	type hamming_stateType is array(11 downto 0) of bit;
+	type hamming_parityType is array(3 downto 0) of bit;
+	type hamming_dataType is array (7 downto 0) of bit;
+	--type fsm_stateType is array (7 downto 0) of bit;
 	
-	constant waitSample 		: hamming_stateType := "0000000";
-	constant sendSDATAC 		: hamming_stateType := "0001011"; 
-	constant sendConfigCH		: hamming_stateType := "0011110";
-	constant sendReadByCmd 	: hamming_stateType := "0010101";
-	constant waitDataReady 	: hamming_stateType := "0110011";
-	constant startRead 			: hamming_stateType := "0111000";
-	constant waitRead 			: hamming_stateType := "0101101";
-	constant reading		 		: hamming_stateType := "0100110";
+	--ADC sequence and hamming correction states
+	constant waitSample 		: hamming_stateType := "000000010011";
+	constant sendSDATAC 		: hamming_stateType := "000000100101"; 
+	constant sendConfigCH		: hamming_stateType := "000001000110";
+	constant sendReadByCmd 	: hamming_stateType := "000010000111";
+	constant waitDataReady 	: hamming_stateType := "000100001001";
+	constant startRead 			: hamming_stateType := "001000001010";
+	constant waitRead 			: hamming_stateType := "010000001011";
+	constant reading		 		: hamming_stateType := "100000001100";
+	
+	--ADC sequence correction states old
+	--constant waitSample 		: fsm_stateType := "00000001";
+	--constant sendSDATAC 		: fsm_stateType := "00000010"; 
+	--constant sendConfigCH		: fsm_stateType := "00000100";
+	--constant sendReadByCmd 	: fsm_stateType := "00001000";
+	--constant waitDataReady 	: fsm_stateType := "00010000";
+	--constant startRead 			: fsm_stateType := "00100000";
+	--constant waitRead 			: fsm_stateType := "01000000";
+	--constant reading		 		: fsm_stateType := "10000000";
 
 	--  signal adcState: adcStateType;
-	signal adcState					: hamming_stateType;
-	signal adcNextState			: hamming_stateType;
+	signal adcState							: hamming_stateType;
+	signal adcNextState					: hamming_stateType;
+	signal adcLastState					: hamming_stateType;
+	signal adcHammingCorrection : std_ulogic;
+	signal adcHammingState 			: hamming_stateType;
+	--ADC sequence correction signals old
+	--signal adcState					: fsm_stateType;
+	--signal adcNextState			: fsm_stateType;
+	--signal adcLastState			: fsm_stateType;
 	signal adcFSMCorrection	: std_ulogic;
 	----
 	
@@ -312,10 +332,13 @@ BEGIN
   begin
     if reset = '1' then
       adcState <= waitSample;
+			adcLastState <= waitSample;
     elsif rising_edge(clock) then
 			--EMG Modifs
+			adcLastState <= adcState;
 			if adcFSMCorrection = '1' then
 				adcState <= adcNextState;
+				adcLastState <= adcNextState;
 			else
 				case adcState is
 					when waitSample =>
@@ -324,7 +347,6 @@ BEGIN
 						--	if DRDY_n = not '0' then
 						--  adcState <= sendWakeup;
 								adcState <= sendSDATAC;
-						--	adcState <= "0011011";
 						--	else
 						--		adcState <= startRead;
 						--	end if;
@@ -341,7 +363,11 @@ BEGIN
 						end if;
 					when sendConfigCH =>
 						if adcConfigured = '1' then
-							adcState <= sendReadByCmd;
+							adcState <= sendReadByCmd;		-- Correct state "000010000111";
+							--adcState <= "10000000";				-- Wrong state, reading
+							--adcState <= "100010001100";				-- Wrong state, reading with one bit modified
+							--adcState <= "100000001100";				-- Wrong state, reading
+							--adcState <= "000011000111";			-- Wrong state, modify one bit
 						end if;
 					when sendReadByCmd =>
 						if adcCmdTimeWait='0' and adcCommandWait = '0' then
@@ -383,6 +409,7 @@ BEGIN
   end process adcSequencer;
 	
 	--EMG Modifs
+																																	--Send a three bytes command
 	adcLongCmd: process(adcState,reset, clock)
 	begin
 		if reset = '1' then
@@ -399,7 +426,7 @@ BEGIN
 			end if;
 		end if;
 	end process adcLongCmd;
-	
+																																	--Wait 24 clock before next command
 	adcCmdTimeWait24: process(reset, modulatorClock, adcSending, adcSendCommand, adcState, adcConfigByteNbr)
 	begin
 		if reset = '1' then
@@ -426,7 +453,7 @@ BEGIN
 			end if;
 		end if;
 	end process adcCmdTimeWait24;
-	
+																																--Wait start of command sending
 	adcWaitCmdSend: process(reset,clock,adcSendCommand)
 	begin
 		if reset = '1' then
@@ -439,7 +466,43 @@ BEGIN
 				adcCommandWait <='1';
 			end if;
 		end if;
-	end process;
+	end process adcWaitCmdSend;
+	
+	-- ADC sequence correction old
+	--sequenceCorrection: process(adcState)
+	--	variable adcShiftState: fsm_stateType;
+	--begin
+	--	adcFSMCorrection <= '0';
+	--	adcNextState <= adcState;
+		
+		--Detect if currentState follow the lastState
+	--	if adcState /= adcLastState then
+	--		adcShiftState := adcLastState sll 1;
+	--		if adcState/=adcShiftState then
+	--			adcFSMCorrection <= '1';
+	--			adcNextState <= waitSample;
+	--		end if;
+	--	end if;
+	--end process sequenceCorrection;
+	
+	-- ADC sequence correction combined with hamming correction
+	sequenceCorrection: process(adcHammingState,adcHammingCorrection)
+		variable adcShiftState 	: hamming_dataType;
+		variable adcStateData		: hamming_dataType;
+	begin
+		adcFSMCorrection <= adcHammingCorrection;
+		adcNextState <= adcHammingState;
+		
+		--Detect if currentState follow the lastState
+		if adcHammingState /= adcLastState and adcHammingState /= waitSample then
+			adcStateData := hamming_dataType(adcHammingState(11 downto 4));
+			adcShiftState := hamming_dataType(adcLastState(11 downto 4)) sll 1;
+			if adcStateData/=adcShiftState then
+				adcFSMCorrection <= '1';
+				adcNextState <= waitSample;
+			end if;
+		end if;
+	end process sequenceCorrection;
 	
 	hammingCorrection: process(adcState)
 		variable hammPartiyCalc 	: hamming_parityType;
@@ -448,48 +511,57 @@ BEGIN
 		variable hammDataIn				: hamming_dataType;
 		variable hammDataOut			: hamming_stateType;
 	begin
-		adcFSMCorrection <= '0';
+		--adcFSMCorrection <= '1';
+		adcHammingCorrection <= '1';
 		
-		hammDataIn := hamming_dataType(adcState(6 downto 3));
-		hammPartiyIn := hamming_parityType(adcState(2 downto 0));
+		hammDataIn := hamming_dataType(adcState(11 downto 4));
+		hammPartiyIn := hamming_parityType(adcState(3 downto 0));
 		
 		--Calc parity from data
-		hammPartiyCalc(0) := hammDataIn(0) XOR hammDataIn(1) XOR hammDataIn(3);
-		hammPartiyCalc(1) := hammDataIn(0) XOR hammDataIn(2) XOR hammDataIn(3);
-		hammPartiyCalc(2) := hammDataIn(1) XOR hammDataIn(2) XOR hammDataIn(3);
+		hammPartiyCalc(0) := hammDataIn(0) XOR hammDataIn(1) XOR hammDataIn(3) XOR hammDataIn(4) XOR hammDataIn(6);
+		hammPartiyCalc(1) := hammDataIn(0) XOR hammDataIn(2) XOR hammDataIn(3) XOR hammDataIn(5) XOR hammDataIn(6);
+		hammPartiyCalc(2) := hammDataIn(1) XOR hammDataIn(2) XOR hammDataIn(3) XOR hammDataIn(7);
+		hammPartiyCalc(3) := hammDataIn(4) XOR hammDataIn(5) XOR hammDataIn(6) XOR hammDataIn(7);
 		
 		--Correct error
 		hammDataOut := adcState;
 		hammPartiyCheck := hammPartiyCalc XOR hammPartiyIn;
 		case hammPartiyCheck is
-			when "000" => hammDataOut := adcState; --all ok
-			when "001" => 
-					adcFSMCorrection <= '1';
+			when "0000" => 								--all ok
+					hammDataOut := adcState; 
+					--adcFSMCorrection <= '0';
+					adcHammingCorrection <= '0';
+			when "0001" => 								--Error in p0
 					hammDataOut(0) := not adcState(0);
-			when "010" =>
-					adcFSMCorrection <= '1';
+			when "0010" =>								--Error in p1
 					hammDataOut(1) := not adcState(1);
-			when "011" =>
-					adcFSMCorrection <= '1';
-					hammDataOut(3) := not adcState(3);
-			when "100" =>
-					adcFSMCorrection <= '1';
-					hammDataOut(2) := not adcState(2);
-			when "101" =>
-					adcFSMCorrection <= '1';
+			when "0011" =>								--Error in d0
 					hammDataOut(4) := not adcState(4);
-			when "110" =>
-					adcFSMCorrection <= '1';
+			when "0100" =>								--Error in p2
+					hammDataOut(2) := not adcState(2);
+			when "0101" =>								--Error in d1
 					hammDataOut(5) := not adcState(5);
-			when "111" =>
-					adcFSMCorrection <= '1';
+			when "0110" =>								--Error in d2
 					hammDataOut(6) := not adcState(6);
-			when others => null;
+			when "0111" =>								--Error in d3
+					hammDataOut(7) := not adcState(7);
+			when "1000" => 								--Error in p3
+					hammDataOut(3) := not adcState(3);
+			when "1001" => 								--Error in d4
+					hammDataOut(8) := not adcState(8);
+			when "1010" =>								--Error in d5
+					hammDataOut(9) := not adcState(9);
+			when "1011" =>								--Error in d6
+					hammDataOut(10) := not adcState(10);
+			when "1100" =>								--Error in d7
+					hammDataOut(11) := not adcState(11);
+			when others => 
+					hammDataOut := waitSample;
 		end case;
 		
 		--Apply correction
-		adcNextState <= hammDataOut;
-		
+		--adcNextState <= hammDataOut;
+		adcHammingState <= hammDataOut;
 	end process;
 	----
                                                                  -- ADC controls
@@ -631,9 +703,12 @@ BEGIN
     end case;
   end process selectData;
 
-  updateStatusRegister: process (adcDataAvailable)
+  updateStatusRegister: process (adcDataAvailable, adcFSMCorrection)
   begin
     adcStatusRegister <= (others => '-');
+		--EMG Modifs
+		adcStatusRegister(adcFSMCorrectionId) <= adcFSMCorrection;
+		----
     adcStatusRegister(adcDataAvailableId) <= adcDataAvailable;
   end process updateStatusRegister;
 

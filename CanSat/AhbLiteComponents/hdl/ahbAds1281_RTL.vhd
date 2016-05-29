@@ -40,7 +40,7 @@ ARCHITECTURE RTL OF ahbAds1282 IS
   constant spiClockDividerRegisterId: natural := 1;
 	--EMG Modifs
   --constant adcRegisterId: natural := 2;
-	constant adcRegisterId: natural := 4;
+	constant adcRegisterId: natural := 6;
 	----
 
   constant valueLowRegisterId: natural := 0;
@@ -48,8 +48,11 @@ ARCHITECTURE RTL OF ahbAds1282 IS
   constant statusRegisterId: natural := 2;
   constant adcDataAvailableId: natural := 0;
 	--EMG Modifs
-  constant adcCurrentRegisterID: natural := 3;
-  constant adcVoltageRegisterID: natural := 4;
+	constant adcFSMCorrectionId: natural := 1;
+  constant adcCurrentRegisterIDLow: natural := 3;
+	constant adcCurrentRegisterIDHigh: natural := 4;
+  constant adcVoltageRegisterIDLow: natural := 5;
+	constant adcVoltageRegisterIDHigh: natural := 6;
 	----
 
   constant registerNb: positive := adcRegisterId+1;
@@ -100,6 +103,9 @@ ARCHITECTURE RTL OF ahbAds1282 IS
 	signal adcCurrentAcquisitionRegister : unsigned(adcSpiDataBitNb-1 downto 0);
 	signal adcVoltageAcquisitionRegister : unsigned(adcSpiDataBitNb-1 downto 0);
 	signal adcCommandWait: std_ulogic;
+	signal adcCmdTimeWait: std_ulogic;
+	signal adcTimecounter: natural;
+	signal adcCounterEnable: std_ulogic;
 	----
   signal adcSpiCounter: unsigned(addressBitNb(adcSpiDataBitNb)-1 downto 0);
 
@@ -109,23 +115,41 @@ ARCHITECTURE RTL OF ahbAds1282 IS
   --  waitSample,
   --  sendWakeup, waitDataReady, startRead, waitRead, reading, sendStandby
   --);
-	type hamming_stateType is array(6 downto 0) of bit;
-	type hamming_parityType is array(2 downto 0) of bit;
-	type hamming_dataType is array (3 downto 0) of bit;
+	type hamming_stateType is array(11 downto 0) of bit;
+	type hamming_parityType is array(3 downto 0) of bit;
+	type hamming_dataType is array (7 downto 0) of bit;
+	--type fsm_stateType is array (7 downto 0) of bit;
 	
-	constant waitSample 		: hamming_stateType := "0000000";
-	constant sendSDATAC 		: hamming_stateType := "0001011"; 
-	constant waitDataReady	: hamming_stateType := "0011110";
-	constant startRead 			: hamming_stateType := "0010101";
-	constant waitRead 			: hamming_stateType := "0110011";
-	constant reading 				: hamming_stateType := "0111000";
-	constant sendStandby 		: hamming_stateType := "0101101";
-	constant sendConfigCH 	: hamming_stateType := "0100110";
-	constant sendReadByCmd 	: hamming_stateType := "1100001";
+	--ADC sequence and hamming correction states
+	constant waitSample 		: hamming_stateType := "000000010011";
+	constant sendSDATAC 		: hamming_stateType := "000000100101"; 
+	constant sendConfigCH		: hamming_stateType := "000001000110";
+	constant sendReadByCmd 	: hamming_stateType := "000010000111";
+	constant waitDataReady 	: hamming_stateType := "000100001001";
+	constant startRead 			: hamming_stateType := "001000001010";
+	constant waitRead 			: hamming_stateType := "010000001011";
+	constant reading		 		: hamming_stateType := "100000001100";
+	
+	--ADC sequence correction states old
+	--constant waitSample 		: fsm_stateType := "00000001";
+	--constant sendSDATAC 		: fsm_stateType := "00000010"; 
+	--constant sendConfigCH		: fsm_stateType := "00000100";
+	--constant sendReadByCmd 	: fsm_stateType := "00001000";
+	--constant waitDataReady 	: fsm_stateType := "00010000";
+	--constant startRead 			: fsm_stateType := "00100000";
+	--constant waitRead 			: fsm_stateType := "01000000";
+	--constant reading		 		: fsm_stateType := "10000000";
 
 	--  signal adcState: adcStateType;
-	signal adcState					: hamming_stateType;
-	signal adcNextState			: hamming_stateType;
+	signal adcState							: hamming_stateType;
+	signal adcNextState					: hamming_stateType;
+	signal adcLastState					: hamming_stateType;
+	signal adcHammingCorrection : std_ulogic;
+	signal adcHammingState 			: hamming_stateType;
+	--ADC sequence correction signals old
+	--signal adcState					: fsm_stateType;
+	--signal adcNextState			: fsm_stateType;
+	--signal adcLastState			: fsm_stateType;
 	signal adcFSMCorrection	: std_ulogic;
 	----
 	
@@ -160,13 +184,27 @@ BEGIN
   begin
     if reset = '1' then
       writeRegisterArray <= (others => (others => '0'));
-      writeRegisterArray(modulatorClockDividerRegisterId) <= to_unsigned(
-        2,
-        writeRegisterArray(modulatorClockDividerRegisterId)'length
-      );
+			--EMG Modifs
+      --writeRegisterArray(modulatorClockDividerRegisterId) <= to_unsigned(2,
+      --  writeRegisterArray(modulatorClockDividerRegisterId)'length);
+			writeRegisterArray(modulatorClockDividerRegisterId) <= to_unsigned(30,
+        writeRegisterArray(modulatorClockDividerRegisterId)'length);
+			----
     elsif rising_edge(clock) then
       if writeReg = '1' then
-        writeRegisterArray(to_integer(addressReg)) <= unsigned(hWData);
+				--EMG Modifs
+				--writeRegisterArray(to_integer(addressReg)) <= unsigned(hWData);
+				if to_integer(addressReg) = modulatorClockDividerRegisterId then
+					if unsigned(hWData) >= 100 or unsigned(hWData) < 25 then
+						writeRegisterArray(modulatorClockDividerRegisterId) <= to_unsigned(30,
+							writeRegisterArray(modulatorClockDividerRegisterId)'length);
+					else
+						writeRegisterArray(to_integer(addressReg)) <= unsigned(hWData);
+					end if;
+				else
+					writeRegisterArray(to_integer(addressReg)) <= unsigned(hWData);
+				end if;
+				----
       end if;
     end if;
   end process storeRegisters;
@@ -222,9 +260,13 @@ BEGIN
     end if;
   end process delayRestart;
 
-  RESET_n <= not '0' when modulatorRestartCounter = 0
-    else not '1';
-
+	--EMG Modifs
+  --RESET_n <= not '0' when modulatorRestartCounter = 0
+  --  else not '1';
+	RESET_n <= not '1' when modulatorRestartCounter = 1
+    else hReset_n;
+	----
+	
   ------------------------------------------------------------------------------
                                                             -- SPI clock divider
   countHalfSpiPeriod: process(reset, clock)
@@ -290,39 +332,45 @@ BEGIN
   begin
     if reset = '1' then
       adcState <= waitSample;
+			adcLastState <= waitSample;
     elsif rising_edge(clock) then
 			--EMG Modifs
+			adcLastState <= adcState;
 			if adcFSMCorrection = '1' then
 				adcState <= adcNextState;
+				adcLastState <= adcNextState;
 			else
 				case adcState is
 					when waitSample =>
 						if enable = '1' then
-							if DRDY_n = not '0' then
-								--EMG Modifs
-								--adcState <= sendWakeup;
+						--EMG Modifs
+						--	if DRDY_n = not '0' then
+						--  adcState <= sendWakeup;
 								adcState <= sendSDATAC;
-								--adcState <= "0011011";
-								----
-							else
-								adcState <= startRead;
-							end if;
-						elsif modulatorRestartCounter = 1 then
-							adcState <= sendStandby;
+						--	else
+						--		adcState <= startRead;
+						--	end if;
+						--elsif modulatorRestartCounter = 1 then
+						--	adcState <= sendStandby;
+						----
 						end if;
 					--EMG Modifs
 					--when sendWakeup =>
 					--  adcState <= waitDataReady;
 					when sendSDATAC =>
-						if adcSending = '0' and adcCommandWait='0' and adcSpiCounter /= 0 then
+						if adcCmdTimeWait='0' and adcCommandWait = '0' then
 							adcState <= sendConfigCH;
 						end if;
 					when sendConfigCH =>
 						if adcConfigured = '1' then
-							adcState <= sendReadByCmd;
+							adcState <= sendReadByCmd;		-- Correct state "000010000111";
+							--adcState <= "10000000";				-- Wrong state, reading
+							--adcState <= "100010001100";				-- Wrong state, reading with one bit modified
+							--adcState <= "100000001100";				-- Wrong state, reading
+							--adcState <= "000011000111";			-- Wrong state, modify one bit
 						end if;
 					when sendReadByCmd =>
-						if adcSending = '0' and adcCommandWait='0' then
+						if adcCmdTimeWait='0' and adcCommandWait = '0' then
 							adcState <= waitDataReady;
 						end if;
 					----
@@ -342,10 +390,16 @@ BEGIN
 						end if;
 					when reading =>
 						if adcSending = '0' then
-							adcState <= sendStandby;
+							--EMG Modifs
+							--adcState <= sendStandby;
+							adcState <= waitSample;
+							----
 						end if;
-					when sendStandby =>
-						adcState <= waitSample;
+					--EMG Modifs
+					--when sendStandby =>
+					--	adcState <= waitSample;
+					--	end if;
+					----
 					when others =>
 						adcState <= waitSample;
 				end case;
@@ -355,6 +409,7 @@ BEGIN
   end process adcSequencer;
 	
 	--EMG Modifs
+																																	--Send a three bytes command
 	adcLongCmd: process(adcState,reset, clock)
 	begin
 		if reset = '1' then
@@ -362,7 +417,7 @@ BEGIN
 			adcConfigByteNbr <= 0;
     elsif rising_edge(clock) then
 			adcConfigured <= '0';
-			if adcState = sendConfigCH and adcSending = '0' and adcCommandWait = '0' then
+			if adcState = sendConfigCH and adcSending = '0' and adcCommandWait = '0' and adcCmdTimeWait = '0' then
 				adcConfigByteNbr <= adcConfigByteNbr+1;
 				if adcConfigByteNbr >= 2 then
 					adcConfigByteNbr <= 0;
@@ -371,18 +426,83 @@ BEGIN
 			end if;
 		end if;
 	end process adcLongCmd;
-	
-	adcWaitCmdSend: process(reset,clock)
+																																	--Wait 24 clock before next command
+	adcCmdTimeWait24: process(reset, modulatorClock, adcSending, adcSendCommand, adcState, adcConfigByteNbr)
+	begin
+		if reset = '1' then
+			adcTimecounter <= 0;
+			adcCmdTimeWait <= '0';
+			adcCounterEnable <= '0';
+		elsif adcSendCommand = '1' then
+			if adcState /= sendConfigCH or (adcState=sendConfigCH and adcConfigByteNbr >= 2) then
+				if rising_edge(adcSending) then
+					adcCmdTimeWait <= '1';
+				elsif falling_edge(adcSending) then
+					adcTimecounter <= 0;
+					adcCounterEnable <= '1';
+					adcCmdTimeWait <= '1';
+				elsif rising_edge(modulatorClock) and adcCounterEnable = '1' then
+					adcCmdTimeWait <= '1';
+					adcTimecounter <= adcTimecounter + 1;
+					if adcTimecounter >= 24 then
+						adcTimecounter <= 0;
+						adcCounterEnable <= '0';
+						adcCmdTimeWait <= '0';
+					end if;
+				end if;
+			end if;
+		end if;
+	end process adcCmdTimeWait24;
+																																--Wait start of command sending
+	adcWaitCmdSend: process(reset,clock,adcSendCommand)
 	begin
 		if reset = '1' then
 			adcCommandWait <='0';
+		elsif rising_edge(adcSendCommand) then
+			adcCommandWait <='1';
 		elsif rising_edge(clock) then
 			adcCommandWait <='0';
-			if adcSendCommand = '1' and adcSending = '0' then
+			if adcSendCommand = '1' and adcSending = '0' and adcCounterEnable = '0' then
 				adcCommandWait <='1';
 			end if;
 		end if;
-	end process;
+	end process adcWaitCmdSend;
+	
+	-- ADC sequence correction old
+	--sequenceCorrection: process(adcState)
+	--	variable adcShiftState: fsm_stateType;
+	--begin
+	--	adcFSMCorrection <= '0';
+	--	adcNextState <= adcState;
+		
+		--Detect if currentState follow the lastState
+	--	if adcState /= adcLastState then
+	--		adcShiftState := adcLastState sll 1;
+	--		if adcState/=adcShiftState then
+	--			adcFSMCorrection <= '1';
+	--			adcNextState <= waitSample;
+	--		end if;
+	--	end if;
+	--end process sequenceCorrection;
+	
+	-- ADC sequence correction combined with hamming correction
+	sequenceCorrection: process(adcHammingState,adcHammingCorrection)
+		variable adcShiftState 	: hamming_dataType;
+		variable adcStateData		: hamming_dataType;
+	begin
+		adcFSMCorrection <= adcHammingCorrection;
+		adcNextState <= adcHammingState;
+		
+		--Detect if currentState follow the lastState
+		if adcHammingState /= adcLastState and adcHammingState /= waitSample then
+			adcStateData := hamming_dataType(adcHammingState(11 downto 4));
+			adcShiftState := hamming_dataType(adcLastState(11 downto 4)) sll 1;
+			if adcStateData/=adcShiftState then
+				adcFSMCorrection <= '1';
+				adcNextState <= waitSample;
+			end if;
+		end if;
+	end process sequenceCorrection;
 	
 	hammingCorrection: process(adcState)
 		variable hammPartiyCalc 	: hamming_parityType;
@@ -391,48 +511,57 @@ BEGIN
 		variable hammDataIn				: hamming_dataType;
 		variable hammDataOut			: hamming_stateType;
 	begin
-		adcFSMCorrection <= '0';
+		--adcFSMCorrection <= '1';
+		adcHammingCorrection <= '1';
 		
-		hammDataIn := hamming_dataType(adcState(6 downto 3));
-		hammPartiyIn := hamming_parityType(adcState(2 downto 0));
+		hammDataIn := hamming_dataType(adcState(11 downto 4));
+		hammPartiyIn := hamming_parityType(adcState(3 downto 0));
 		
 		--Calc parity from data
-		hammPartiyCalc(0) := hammDataIn(0) XOR hammDataIn(1) XOR hammDataIn(3);
-		hammPartiyCalc(1) := hammDataIn(0) XOR hammDataIn(2) XOR hammDataIn(3);
-		hammPartiyCalc(2) := hammDataIn(1) XOR hammDataIn(2) XOR hammDataIn(3);
+		hammPartiyCalc(0) := hammDataIn(0) XOR hammDataIn(1) XOR hammDataIn(3) XOR hammDataIn(4) XOR hammDataIn(6);
+		hammPartiyCalc(1) := hammDataIn(0) XOR hammDataIn(2) XOR hammDataIn(3) XOR hammDataIn(5) XOR hammDataIn(6);
+		hammPartiyCalc(2) := hammDataIn(1) XOR hammDataIn(2) XOR hammDataIn(3) XOR hammDataIn(7);
+		hammPartiyCalc(3) := hammDataIn(4) XOR hammDataIn(5) XOR hammDataIn(6) XOR hammDataIn(7);
 		
 		--Correct error
 		hammDataOut := adcState;
 		hammPartiyCheck := hammPartiyCalc XOR hammPartiyIn;
 		case hammPartiyCheck is
-			when "000" => hammDataOut := adcState; --all ok
-			when "001" => 
-					adcFSMCorrection <= '1';
+			when "0000" => 								--all ok
+					hammDataOut := adcState; 
+					--adcFSMCorrection <= '0';
+					adcHammingCorrection <= '0';
+			when "0001" => 								--Error in p0
 					hammDataOut(0) := not adcState(0);
-			when "010" =>
-					adcFSMCorrection <= '1';
+			when "0010" =>								--Error in p1
 					hammDataOut(1) := not adcState(1);
-			when "011" =>
-					adcFSMCorrection <= '1';
-					hammDataOut(3) := not adcState(3);
-			when "100" =>
-					adcFSMCorrection <= '1';
-					hammDataOut(2) := not adcState(2);
-			when "101" =>
-					adcFSMCorrection <= '1';
+			when "0011" =>								--Error in d0
 					hammDataOut(4) := not adcState(4);
-			when "110" =>
-					adcFSMCorrection <= '1';
+			when "0100" =>								--Error in p2
+					hammDataOut(2) := not adcState(2);
+			when "0101" =>								--Error in d1
 					hammDataOut(5) := not adcState(5);
-			when "111" =>
-					adcFSMCorrection <= '1';
+			when "0110" =>								--Error in d2
 					hammDataOut(6) := not adcState(6);
-			when others => null;
+			when "0111" =>								--Error in d3
+					hammDataOut(7) := not adcState(7);
+			when "1000" => 								--Error in p3
+					hammDataOut(3) := not adcState(3);
+			when "1001" => 								--Error in d4
+					hammDataOut(8) := not adcState(8);
+			when "1010" =>								--Error in d5
+					hammDataOut(9) := not adcState(9);
+			when "1011" =>								--Error in d6
+					hammDataOut(10) := not adcState(10);
+			when "1100" =>								--Error in d7
+					hammDataOut(11) := not adcState(11);
+			when others => 
+					hammDataOut := waitSample;
 		end case;
 		
 		--Apply correction
-		adcNextState <= hammDataOut;
-		
+		--adcNextState <= hammDataOut;
+		adcHammingState <= hammDataOut;
 	end process;
 	----
                                                                  -- ADC controls
@@ -459,15 +588,13 @@ BEGIN
 			  adcSendCommand <= '1';
         adcCommand <= cmdRDATA;
 			when sendConfigCH =>
+				adcSendCommand <= '1';
 				case adcConfigByteNbr is
 					when 0 =>
-						adcSendCommand <= '1';
 						adcCommand <= cmdWRConfig1;
 					when 1 =>
-						adcSendCommand <= '1';
 						adcCommand <= x"00";
 					when 2 => 
-						adcSendCommand <= '1';
 						if adcCurrentCHAcquisition = '0' then
 							adcCommand <= cmdCH1Enable;
 						else
@@ -479,10 +606,11 @@ BEGIN
 			----
       when startRead =>
         adcSendRead <= '1';
-      when sendStandby =>
-        adcSendCommand <= '1';
-        adcCommand <= cmdStandby;
-        adcDataAvailable <= '1';
+			--EMG Modifs
+      --when sendStandby =>
+      --  adcSendCommand <= '1';
+      --  adcCommand <= cmdStandby;
+      --  adcDataAvailable <= '1';
       when others => null;
     end case;
   end process adcControls;
@@ -501,40 +629,48 @@ BEGIN
       adcSpiDataIn <= (others => '0');
 			--EMG Modifs
       --adcSample <= (others => '0');
+			adcSending <= '0';
 			adcVoltageAcquisitionRegister <= (others => '0');
 			adcCurrentAcquisitionRegister <= (others => '0');
 			----
       adcSpiCounter <= (others => '0');
     elsif rising_edge(clock) then
-      if adcSpiCounter = 0 then
-        adcSending <= '0';
-        if adcSendCommand = '1' then
-          adcSpiCounter <= to_unsigned(adcSpiCommandBitNb+1, adcSpiCounter'length);
-          adcSpiDataOut <= shift_left(
-            resize(adcCommand, adcSpiDataOut'length),
-            adcSpiDataOut'length - adcCommand'length - 1
-          );
-        elsif adcSendRead = '1' then
-          adcSpiCounter <= to_unsigned(adcSpiDataBitNb+1, adcSpiCounter'length);
-        end if;
-				--EMG Modifs
-        --if adcState = reading then
-        --  adcSample <= adcSpiDataIn;
-				if adcState = reading and adcCurrentCHAcquisition = '0' then
-					adcVoltageAcquisitionRegister <= adcSpiDataIn;
-				elsif adcState = reading and adcCurrentCHAcquisition = '1' then
-					adcCurrentAcquisitionRegister <= adcSpiDataIn;
-				----
-        end if;
-      elsif (spiClockEn = '1') and (spiClock = '1') then
-        adcSpiCounter <= adcSpiCounter - 1;
-        adcSpiDataOut <= shift_left(adcSpiDataOut, 1);
-        adcSpiDataIn  <= shift_left(adcSpiDataIn, 1);
-        adcSpiDataIn(0) <= DOUT;
-        if (adcSpiCounter = adcSpiCommandBitNb+1) or (adcSpiCounter = adcSpiDataBitNb+1) then
-          adcSending <= '1';
-        end if;
-      end if;
+			--EMG Modifs
+			if adcCounterEnable = '0' then
+			----
+				if adcSpiCounter = 0 then
+					adcSending <= '0';
+					--EMG Modifs
+					--if adcSendCommand = '1' then
+					if adcSendCommand = '1' and adcCommandWait = '1' and adcConfigured = '0' then
+					----
+						adcSpiCounter <= to_unsigned(adcSpiCommandBitNb+1, adcSpiCounter'length);
+						adcSpiDataOut <= shift_left(
+							resize(adcCommand, adcSpiDataOut'length),
+							adcSpiDataOut'length - adcCommand'length - 1
+						);
+					elsif adcSendRead = '1' then
+						adcSpiCounter <= to_unsigned(adcSpiDataBitNb+1, adcSpiCounter'length);
+					end if;
+					--EMG Modifs
+					--if adcState = reading then
+					--  adcSample <= adcSpiDataIn;
+					if adcState = reading and adcCurrentCHAcquisition = '0' then
+						adcVoltageAcquisitionRegister <= adcSpiDataIn;
+					elsif adcState = reading and adcCurrentCHAcquisition = '1' then
+						adcCurrentAcquisitionRegister <= adcSpiDataIn;
+					----
+					end if;
+				elsif (spiClockEn = '1') and (spiClock = '1') then
+					adcSpiCounter <= adcSpiCounter - 1;
+					adcSpiDataOut <= shift_left(adcSpiDataOut, 1);
+					adcSpiDataIn  <= shift_left(adcSpiDataIn, 1);
+					adcSpiDataIn(0) <= DOUT;
+					if (adcSpiCounter = adcSpiCommandBitNb+1) or (adcSpiCounter = adcSpiDataBitNb+1) then
+						adcSending <= '1';
+					end if;
+				end if;
+			end if;
     end if;
   end process spiExchangeData;
 
@@ -558,16 +694,21 @@ BEGIN
       when statusRegisterId =>
         hRData <= std_ulogic_vector(adcStatusRegister);
 			--EMG Modifs
-			when adcCurrentRegisterID => hRData <= std_ulogic_vector(adcCurrentAcquisitionRegister(hRData'range));
-			when adcVoltageRegisterID => hRData <= std_ulogic_vector(adcVoltageAcquisitionRegister(hRData'range));
+			when adcCurrentRegisterIDLow => hRData <= std_ulogic_vector(adcCurrentAcquisitionRegister(hRData'range));
+			when adcCurrentRegisterIDHigh => hRData <= std_ulogic_vector(shift_right(adcCurrentAcquisitionRegister, hRData'length)(hRData'range));
+			when adcVoltageRegisterIDLow => hRData <= std_ulogic_vector(adcVoltageAcquisitionRegister(hRData'range));
+			when adcVoltageRegisterIDHigh => hRData <= std_ulogic_vector(shift_right(adcVoltageAcquisitionRegister, hRData'length)(hRData'range));
 			----
       when others => hRData <= (others => '-');
     end case;
   end process selectData;
 
-  updateStatusRegister: process (adcDataAvailable)
+  updateStatusRegister: process (adcDataAvailable, adcFSMCorrection)
   begin
     adcStatusRegister <= (others => '-');
+		--EMG Modifs
+		adcStatusRegister(adcFSMCorrectionId) <= adcFSMCorrection;
+		----
     adcStatusRegister(adcDataAvailableId) <= adcDataAvailable;
   end process updateStatusRegister;
 

@@ -7,4 +7,230 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/Emilie/Documents/Git Hub/HiRel/CanSat
+Z0 dC:/Users/Emilie/Desktop/Hirel/CanSat
+Eads1282
+w1462455150
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_entity.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_entity.vhg
+l0
+L13
+V=N?2nNO9h[D4d2`:MR7AT1
+!s100 gTVX6QUKSAMN4C^>ZdDE31
+Z4 OL;C;10.4b;61
+32
+Z5 !s110 1464527328
+!i10b 1
+!s108 1464527327.000000
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_entity.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_entity.vhg|
+!i113 0
+Z6 o-nologo -work AhbLiteComponents_test -2002
+Z7 tExplicit 1
+Asim
+w1463403656
+R1
+R2
+R3
+DEx4 work 7 ads1282 0 22 =N?2nNO9h[D4d2`:MR7AT1
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_sim.vhd
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_sim.vhd
+l41
+L1
+VoR>5e;]U9]@1Q7G1BhfEP0
+!s100 8of35[Q3kc05PP;EjR=k33
+R4
+32
+R5
+!i10b 1
+Z8 !s108 1464527328.000000
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_sim.vhd|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_sim.vhd|
+!i113 0
+R6
+R7
+Eads1282_tb
+Z9 w1462357724
+R0
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_entity.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_entity.vhg
+l0
+L11
+Vz^d:<m1cV6mziDEdS05Q01
+!s100 7ogT7cPC=A>[JmV@@fTzI0
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_entity.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_entity.vhg|
+!i113 0
+R6
+R7
+Astruct
+w1462455956
+DEx22 ahblitecomponents_test 14 ads1282_tester 0 22 H7VGBKi<A?fId^]QM9YM00
+Z10 DEx22 ahblitecomponents_test 7 ads1282 0 22 =N?2nNO9h[D4d2`:MR7AT1
+DEx4 work 10 ads1282_tb 0 22 z^d:<m1cV6mziDEdS05Q01
+R1
+R2
+R3
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_struct.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_struct.vhg
+l70
+L16
+VZC?Fad4iF0cnLZY]87]iU2
+!s100 ?LSi5GJjQ?L5<]CizVFcm2
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_struct.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tb_struct.vhg|
+!i113 0
+R6
+R7
+Eads1282_tester
+w1462622419
+R1
+R2
+R3
+R0
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_entity.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_entity.vhg
+l0
+L13
+VH7VGBKi<A?fId^]QM9YM00
+!s100 gRQRFOmkBJ`gln[IcZTDS1
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_entity.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_entity.vhg|
+!i113 0
+R6
+R7
+Atest
+w1463403619
+DEx4 work 14 ads1282_tester 0 22 H7VGBKi<A?fId^]QM9YM00
+Z11 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R1
+R3
+R2
+Z12 DPx11 common_test 9 testutils 0 22 ?P47^UnaUnf]eeE<Di;`n1
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_test.vhd
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_test.vhd
+l51
+L6
+VRKb:Vh4ZfHkAGQh=h<j=Z3
+!s100 97:P_^FW<mHOT]FHg=KM53
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_test.vhd|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ads1282_tester_test.vhd|
+!i113 0
+R6
+R7
+Eahbads1282_tb
+R9
+R0
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_entity.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_entity.vhg
+l0
+L11
+VOcdVODMRVJJBMPKK3aMCe1
+!s100 Zf:91e4EE?_Cjd>_J;SSg0
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_entity.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_entity.vhg|
+!i113 0
+R6
+R7
+Astruct
+w1462456160
+DEx22 ahblitecomponents_test 17 ahbads1282_tester 0 22 m[Qahf2Ahh]J4^I@C_A@V3
+DEx17 ahblitecomponents 10 ahbads1282 0 22 P2cnNz=f[6JdcTA0PGZn82
+R10
+DEx4 work 13 ahbads1282_tb 0 22 OcdVODMRVJJBMPKK3aMCe1
+Z13 DPx7 ahblite 7 ahblite 0 22 k7Ni?lN6fegM^6@lNQXBM0
+R1
+R2
+R3
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_struct.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_struct.vhg
+l115
+L19
+VaAi<bS2N1QB`THjd9hoEo3
+!s100 Z_]7R[g@fUQOFDWS;k@Uf3
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_struct.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tb_struct.vhg|
+!i113 0
+R6
+R7
+Eahbads1282_tester
+w1462456183
+R13
+R1
+R2
+R3
+R0
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tester_entity.vhg
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tester_entity.vhg
+l0
+L15
+Vm[Qahf2Ahh]J4^I@C_A@V3
+!s100 0IdR7SBiBEh_[JSc8eN7^2
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tester_entity.vhg|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbads1282_tester_entity.vhg|
+!i113 0
+R6
+R7
+Atest
+w1464339722
+R13
+DEx4 work 17 ahbads1282_tester 0 22 m[Qahf2Ahh]J4^I@C_A@V3
+R11
+R1
+R3
+R2
+R12
+8C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbAds1282_tester_test.vhd
+FC:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbAds1282_tester_test.vhd
+l42
+L6
+V<D[K;2ON=VLZo7n^QDMGW0
+!s100 cYYLNU^7[Tb3926bk8WMA3
+R4
+32
+R5
+!i10b 1
+R8
+!s90 -work|AhbLiteComponents_test|-nologo|-2002|C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbAds1282_tester_test.vhd|
+!s107 C:\Users\Emilie\Desktop\Hirel\CanSat\AhbLiteComponents_test\hdl\ahbAds1282_tester_test.vhd|
+!i113 0
+R6
+R7

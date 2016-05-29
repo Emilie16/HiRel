@@ -37,9 +37,17 @@ add wave -noupdate -expand -group {Sampling sequence} -radix unsigned /ahbads128
 add wave -noupdate -expand -group {Sampling sequence} /ahbads1282_tb/i_dut/adcsending
 add wave -noupdate -expand -group {Sampling sequence} /ahbads1282_tb/i_dut/adcCurrentAcquisitionRegister
 add wave -noupdate -expand -group {Sampling sequence} /ahbads1282_tb/i_dut/adcVoltageAcquisitionRegister
-add wave -noupdate -expand -group {Hamming} /ahbads1282_tb/i_dut/adcstate
-add wave -noupdate -expand -group {Hamming} /ahbads1282_tb/i_dut/adcNextState
-add wave -noupdate -expand -group {Hamming} /ahbads1282_tb/i_dut/adcFSMCorrection
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcstate
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcLastState
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcHammingCorrection
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcHammingState
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcNextState
+add wave -noupdate -expand -group {State correction} /ahbads1282_tb/i_dut/adcFSMCorrection
+add wave -noupdate -expand -group {WaitCmdTime} /ahbads1282_tb/i_dut/adcCommandWait
+add wave -noupdate -expand -group {WaitCmdTime} /ahbads1282_tb/i_dut/adcCmdTimeWait
+add wave -noupdate -expand -group {WaitCmdTime} /ahbads1282_tb/i_dut/adcTimecounter
+add wave -noupdate -expand -group {WaitCmdTime} /ahbads1282_tb/i_dut/adcCounterEnable
+add wave -noupdate -expand -group {WaitCmdTime} /ahbads1282_tb/i_dut/adcConfigured
 add wave -noupdate /ahbads1282_tb/i_adc/adcstate
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}

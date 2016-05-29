@@ -7,28 +7,33 @@ Documentation:
 	Dissipation de chaleur			:	Emilie	OK
 	FMECA					:	Yann	
 	Analyse Monté-Carlo			:	Emilie	OK à discuter avec Jojo
+	Détermination des paramètres à 
+	considérer				:	Emilie OK à discuter avec Jojo
+	Détermination des performances à
+	analyser				:	Emilie OK à discuter avec Jojo
+	Évaluation des résultats		:	Emilie OK à discuter avec Jojo
 	Analyse de stress des composants (PSA)	:	Yann	
 	Dimmensionnement du filtre passe-bas	:	Yann	
 	Routage					:	Yann	
-	Simulation VHDL				:	Emilie	
-	Matrice de conformité			: 	Emilie	
-	Banc de test				: 	Emilie	
+	Simulation VHDL				:	Emilie	OK
+	Matrice de conformité			: 	Emilie	OK
+	Banc de test				: 	Emilie	OK
 	Circuit de mesure de rotation à 
 	redondance froide			:	Yann	
 	Nombre de pannes par milliard d'heures	:	Yann	
-	Circuit AMBA				:	Emilie	
-	Simulation du circuit AMBA		:	Emilie	
-	Périphérique pour convertisseur A/D	:	Emilie	
-	Machine d'état du contrôleur ADC	:	Emilie	
-	Codage de la machine d'états		:	Emilie	Reprendre S11
+	Circuit AMBA				:	Emilie	OK
+	Simulation du circuit AMBA		:	Emilie	OK
+	Périphérique pour convertisseur A/D	:	Emilie	OK
+	Machine d'état du contrôleur ADC	:	Emilie	OK
+	Codage de la machine d'états		:	Emilie	OK
 	Registre à décalage			:	Emilie	
-	Machine d'état avec contraintes SEU	:	Emilie	
-	Décodeur de Hamming			:	Emilie	
-	Estimation du taux de SEU par jour	:	Emilie	
+	Machine d'état avec contraintes SEU	:	Emilie	OK
+	Décodeur de Hamming			:	Emilie	OK
+	Estimation du taux de SEU par jour	:	Emilie	OK
 	Alimentation FPGA			:	Emilie	
 	Entrées / sorties du circuit		:	Emilie	
-	Environnement des test			: 	Emilie	
-	Plan de test				:	Emilie	
-	Procédure de test			:	Emilie	
+	Environnement des test			: 	Yann	
+	Plan de test				:	Yann	
+	Procédure de test			:	Yann	
 	Analyse du système de mesure de 
-	vitesse de rotation			: 	Emilie	
+	vitesse de rotation			: 	Yann	

@@ -13,7 +13,10 @@ ARCHITECTURE test OF ahbAds1282_tester IS
   signal reset_int: std_uLogic;
                                                               -- sampling enable
   constant samplingPeriod: time := 20 us;
-  constant enablePeriodNb: positive := 2*samplingPeriod / clockPeriod;
+	--EMG modifs
+  --constant enablePeriodNb: positive := 2*samplingPeriod / clockPeriod;
+	constant enablePeriodNb: positive := 6*samplingPeriod / clockPeriod;
+	----
   signal enable_int: std_uLogic := '0';
                                                          -- register definitions
   constant modulatorClockDividerRegisterId: natural := 0;
@@ -49,12 +52,25 @@ BEGIN
                                                               -- sampling enable
   buildEnable: process
   begin
-    for index in 1 to enablePeriodNb-1 loop
-      wait until rising_edge(clock_int);
-    end loop;
-    enable_int <= '1';
-    wait until rising_edge(clock_int);
-    enable_int <= '0';
+		--EMG Test
+    --for index in 1 to enablePeriodNb-1 loop
+    --  wait until rising_edge(clock_int);
+    --end loop;
+		--enable_int <= '1';
+		--wait until rising_edge(clock_int);
+    --enable_int <= '0';
+		for i in 1 to 5 loop
+			for index in 1 to enablePeriodNb-1 loop
+				wait until rising_edge(clock_int);
+			end loop;
+			enable_int <= '1';
+			wait until rising_edge(clock_int);
+			enable_int <= '0';
+		end loop;
+		enable_int <= '1';
+		wait for 800 us;
+		enable_int <= '0';
+		----
   end process buildEnable;
 
   enable <= enable_int;
@@ -80,26 +96,24 @@ BEGIN
     wait until rising_edge(clock_int);
     registerWrite <= '1', '0' after clockPeriod;
     wait for 1 us;
+		
+		--EMG Modifs
                           -- write odd value to modulator clock divider register
     registerAddress <= modulatorClockDividerRegisterId;
-    registerWData <= 3;
+    --registerWData <= 3;
+		registerWData <= 50;
     wait until rising_edge(clock_int);
     registerWrite <= '1', '0' after clockPeriod;
     wait for 1 us;
                          -- write even value to modulator clock divider register
     registerAddress <= modulatorClockDividerRegisterId;
-    registerWData <= 4;
+		--registerWData <= 4;
+		registerWData <= 3;
+		----	
     wait until rising_edge(clock_int);
     registerWrite <= '1', '0' after clockPeriod;
     wait for 1 us;
 		
-		--EMG Modifs
-    registerAddress <= modulatorClockDividerRegisterId;
-    registerWData <= 50;
-    wait until rising_edge(clock_int);
-    registerWrite <= '1', '0' after clockPeriod;
-    wait for 1 us;
-		----
                                                   -- write value to ADC register
     registerAddress <= adcRegisterId;
     registerWData <= 16#100# * 16#01# + 16#52#;
@@ -113,7 +127,7 @@ BEGIN
     wait for 1 us;
     ----------------------------------------------------------------------------
                                                                -- get ADC sample
-    wait for 130 us - now;
+    wait for 130 us - now;	
                                                               -- read ADC status
     registerAddress <= statusRegisterId;
     wait until rising_edge(clock_int);
@@ -130,6 +144,29 @@ BEGIN
     registerRead <= '1', '0' after clockPeriod/10;
     wait for 100 ns;
 
+		--EMG Modifs
+		wait for 100 us;
+		registerAddress <= 3;											--read ADC LSB current register
+    wait until rising_edge(clock_int);
+    registerRead <= '1', '0' after clockPeriod/10;
+    wait for 100 ns;
+		
+		registerAddress <= 4;											--read ADC MSB current register
+    wait until rising_edge(clock_int);
+    registerRead <= '1', '0' after clockPeriod/10;
+    wait for 100 ns;
+		
+		registerAddress <= 5;											-- read ADC LSB voltage register
+    wait until rising_edge(clock_int);
+    registerRead <= '1', '0' after clockPeriod/10;
+    wait for 100 ns;
+		
+		registerAddress <= 6;											-- read ADC MSB voltage register
+    wait until rising_edge(clock_int);
+    registerRead <= '1', '0' after clockPeriod/10;
+    wait for 100 ns;
+		----
+		
     wait;
   end process testSequence;
 
@@ -181,9 +218,9 @@ BEGIN
   aIn2 <= outAmplitude * cos(2.0*math_pi*sineFrequency/2.0*tReal);
 
 	--EMG Modifs
-  AINP1 <= aIn1 when aIn1 >= 0.0 else 0.0;
+  AINP1 <= aIn1 when aIn1 >= 0.0 else -aIn1;
 --  AINN1 <= 0.0  when aIn1 >= 0.0 else -aIn1;
-  AINP2 <= aIn2 when aIn2 >= 0.0 else 0.0;
+  AINP2 <= aIn2 when aIn2 >= 0.0 else -aIn2;
 --  AINN2 <= 0.0  when aIn2 >= 0.0 else -aIn2;
 	----
 

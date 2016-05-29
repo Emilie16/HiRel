@@ -16,7 +16,7 @@
 # //
 vsim AhbLiteComponents_test.ahbads1282_tb
 # vsim AhbLiteComponents_test.ahbads1282_tb 
-# Start time: 11:02:27 on May 27,2016
+# Start time: 15:43:23 on May 29,2016
 # ** Warning: Multiple occurences of ini variable NumericStdNoWarnings are found, only first occurence will be considered.
 # ** Note: (vsim-3812) Design is being optimized...
 # 
@@ -33,6 +33,10 @@ vsim AhbLiteComponents_test.ahbads1282_tb
 #    Time: 0 ps  Iteration: 0  Instance: /ahbads1282_tb/I_tester
 # Loading ieee.math_real(body)
 # Loading work.ahbads1282_tester(test)#1
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
 do C:/Users/Emilie/Desktop/Hirel/CanSat/Simulation/ahbAds1282.do
 # ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/sync'.
 # Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 22
@@ -52,5 +56,28 @@ restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # 
 run
-# End time: 17:24:48 on May 27,2016, Elapsed time: 6:22:21
-# Errors: 9, Warnings: 1
+do C:/Users/Emilie/Desktop/Hirel/CanSat/Simulation/ahbAds1282.do
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/sync'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 22
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/pwdn_n'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 23
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/i_dut/adcsample'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 29
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+# End time: 16:34:39 on May 29,2016, Elapsed time: 0:51:16
+# Errors: 18, Warnings: 1
