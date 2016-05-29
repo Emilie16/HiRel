@@ -1,0 +1,12 @@
+DESIGN ahb@uart_tb
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN ahb@uart_tb
+VIEW symbol.sb
+GRAPHIC 53,0 8 0 
+DESIGN ahb@uart_tb
+VIEW symbol.sb
+GRAPHIC 1,0 11 0 
+DESIGN ahb@uart_tb
+VIEW symbol.sb
+GRAPHIC 1,0 12 0 

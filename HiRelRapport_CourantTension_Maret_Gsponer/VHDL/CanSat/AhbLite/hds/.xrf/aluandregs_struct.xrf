@@ -1,0 +1,245 @@
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 0
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 345,0 9 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 12
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 0,0 15 2 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 970,0 20 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 879,0 21 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 887,0 22 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1269,0 23 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 24
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 25
+LIBRARY NanoBlaze
+DESIGN alu
+VIEW @r@t@l
+GRAPHIC 1908,0 27 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 14,0 28 1 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 111,0 33 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 86,0 34 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 61,0 35 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 325,0 36 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 330,0 37 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 101,0 38 0 
+DESIGN alu
+VIEW symbol.sb
+GRAPHIC 388,0 39 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1828,0 42 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 14,0 43 1 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 51,0 47 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 56,0 48 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 66,0 49 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 71,0 50 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 76,0 51 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 81,0 52 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 86,0 53 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 91,0 54 0 
+DESIGN alu@b@op@selector
+VIEW symbol.sb
+GRAPHIC 61,0 55 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1870,0 58 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 14,0 59 1 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 51,0 64 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 56,0 65 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 66,0 66 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 81,0 67 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 61,0 68 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 86,0 69 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 71,0 70 0 
+DESIGN register@file
+VIEW symbol.sb
+GRAPHIC 76,0 71 0 
+LIBRARY NanoBlaze
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 74
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1908,0 77 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1828,0 78 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1870,0 79 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 82
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1431,0 85 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 88
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1441,0 89 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 92
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 93
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1908,0 95 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1915,0 96 1 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 43,0 101 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 57,0 102 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 881,0 103 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 889,0 104 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 972,0 105 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 85,0 106 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 267,0 107 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1828,0 109 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1835,0 110 1 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 99,0 114 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 113,0 115 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 141,0 116 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 155,0 117 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1263,0 118 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 183,0 119 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 211,0 120 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 239,0 121 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 889,0 122 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1870,0 124 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1877,0 125 1 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 15,0 130 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 29,0 131 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 71,0 132 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 705,0 133 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 972,0 134 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 197,0 135 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 881,0 136 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+GRAPHIC 1263,0 137 0 
+DESIGN alu@and@regs
+VIEW struct.bd
+NO_GRAPHIC 140

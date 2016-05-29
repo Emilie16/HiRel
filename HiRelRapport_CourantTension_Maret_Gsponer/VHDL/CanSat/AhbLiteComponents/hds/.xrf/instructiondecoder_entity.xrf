@@ -1,0 +1,57 @@
+DESIGN instruction@decoder
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 13,0 13 1 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 494,0 26 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 400,0 27 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 405,0 28 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 56,0 29 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 664,0 30 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 653,0 31 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 410,0 32 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 669,0 33 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 441,0 34 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 463,0 35 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 71,0 36 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 741,0 37 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 794,0 38 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 895,0 39 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 1,0 42 0 
+DESIGN instruction@decoder
+VIEW symbol.sb
+GRAPHIC 1,0 43 0 

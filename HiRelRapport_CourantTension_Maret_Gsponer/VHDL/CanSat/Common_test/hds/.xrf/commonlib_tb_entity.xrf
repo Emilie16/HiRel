@@ -1,0 +1,12 @@
+DESIGN common@lib_tb
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN common@lib_tb
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN common@lib_tb
+VIEW symbol.sb
+GRAPHIC 1,0 14 0 
+DESIGN common@lib_tb
+VIEW symbol.sb
+GRAPHIC 1,0 15 0 

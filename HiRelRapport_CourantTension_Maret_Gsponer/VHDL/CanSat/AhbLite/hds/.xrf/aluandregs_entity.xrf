@@ -1,0 +1,75 @@
+DESIGN alu@and@regs
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 50,0 8 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 13,0 13 1 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 400,0 21 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 405,0 22 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 56,0 23 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 436,0 24 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 51,0 25 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 410,0 26 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 421,0 27 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 494,0 28 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 61,0 29 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 621,0 30 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 426,0 31 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 66,0 32 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 431,0 33 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 530,0 34 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 441,0 35 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 71,0 36 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 463,0 37 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 674,0 38 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 525,0 39 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 446,0 40 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 1,0 43 0 
+DESIGN alu@and@regs
+VIEW symbol.sb
+GRAPHIC 1,0 44 0 

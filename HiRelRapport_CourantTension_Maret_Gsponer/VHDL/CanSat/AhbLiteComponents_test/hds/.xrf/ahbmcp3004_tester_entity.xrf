@@ -1,0 +1,48 @@
+DESIGN ahb@mcp3004_tester
+VIEW interface
+NO_GRAPHIC 0
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 50,0 8 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 71,0 16 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 76,0 17 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 86,0 18 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 51,0 19 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 56,0 20 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 61,0 21 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 66,0 22 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 81,0 23 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 91,0 24 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 96,0 25 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 101,0 26 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 106,0 27 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 1,0 30 0 
+DESIGN ahb@mcp3004_tester
+VIEW interface
+GRAPHIC 1,0 31 0 

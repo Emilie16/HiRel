@@ -1,0 +1,56 @@
+# Reading C:/questasim64_10.4b/tcl/vsim/pref.tcl
+# //  Questa Sim-64
+# //  Version 10.4b win64 May 27 2015
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+vsim AhbLiteComponents_test.ahbads1282_tb
+# vsim AhbLiteComponents_test.ahbads1282_tb 
+# Start time: 11:02:27 on May 27,2016
+# ** Warning: Multiple occurences of ini variable NumericStdNoWarnings are found, only first occurence will be considered.
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ahblite.ahblite(body)
+# Loading work.ahbads1282_tb(struct)#1
+# Loading ahblitecomponents.ahbads1282(rtl)#1
+# Loading work.ads1282(sim)#1
+# Loading common_test.testutils(body)
+# ** Warning: (vsim-3479) Time unit 'fs' is less than the simulator resolution (1ps).
+#    Time: 0 ps  Iteration: 0  Instance: /ahbads1282_tb/I_tester
+# Loading ieee.math_real(body)
+# Loading work.ahbads1282_tester(test)#1
+do C:/Users/Emilie/Desktop/Hirel/CanSat/Simulation/ahbAds1282.do
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/sync'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 22
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/pwdn_n'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 23
+# ** Error: (vish-4014) No objects found matching '/ahbads1282_tb/i_dut/adcsample'.
+# Executing ONERROR command at macro C:\Users\Emilie\Desktop\Hirel\CanSat\Simulation\ahbAds1282.do line 29
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+run
+# End time: 17:24:48 on May 27,2016, Elapsed time: 6:22:21
+# Errors: 9, Warnings: 1

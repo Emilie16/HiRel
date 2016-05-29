@@ -1,0 +1,342 @@
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 0
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 187,0 9 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 14
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 0,0 18 2 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 1,0 21 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 21
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13192,0 25 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13216,0 26 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13222,0 27 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13204,0 28 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13186,0 29 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13210,0 30 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13198,0 31 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13378,0 32 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13370,0 33 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13472,0 34 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12627,0 35 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12563,0 36 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12587,0 37 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12579,0 38 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12555,0 39 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12571,0 40 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12595,0 41 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12611,0 42 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12619,0 43 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12603,0 44 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 45
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 46
+LIBRARY AhbLiteComponents
+DESIGN ahb@adc670
+VIEW @r@t@l
+GRAPHIC 13462,0 48 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 14,0 49 1 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2651,0 54 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2789,0 55 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2838,0 56 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2452,0 57 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2514,0 58 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2519,0 59 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2692,0 60 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2494,0 61 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2464,0 62 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2474,0 63 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2794,0 64 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2773,0 65 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2768,0 66 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2799,0 67 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2778,0 68 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2469,0 69 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2504,0 70 0 
+DESIGN ahb@adc670
+VIEW symbol.sb
+GRAPHIC 2509,0 71 0 
+LIBRARY AhbLiteComponents_test
+DESIGN @a@d@c_670
+VIEW sim
+GRAPHIC 13264,0 74 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 67,0 76 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 182,0 77 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 72,0 78 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 187,0 79 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 77,0 80 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 82,0 81 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 177,0 82 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 197,0 83 0 
+DESIGN @a@d@c_670
+VIEW symbol.sb
+GRAPHIC 192,0 84 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12657,0 87 0 
+DESIGN ahb@adc670_tester
+VIEW interface
+GRAPHIC 14,0 88 1 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13482,0 92 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12589,0 93 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12581,0 94 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12573,0 95 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13380,0 96 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13372,0 97 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13474,0 98 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12629,0 99 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12565,0 100 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12557,0 101 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12597,0 102 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12613,0 103 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12621,0 104 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12605,0 105 0 
+LIBRARY AhbLiteComponents_test
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 108
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13264,0 111 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13462,0 112 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12657,0 113 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 116
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 118
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13462,0 120 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13469,0 121 1 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13206,0 126 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13200,0 127 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13474,0 128 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12629,0 129 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12565,0 130 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12557,0 131 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12597,0 132 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12613,0 133 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12621,0 134 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12605,0 135 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13194,0 136 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13218,0 137 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13224,0 138 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13188,0 139 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13212,0 140 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12589,0 141 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12581,0 142 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12573,0 143 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13264,0 145 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13194,0 147 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13218,0 148 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13224,0 149 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13188,0 150 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13212,0 151 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13380,0 152 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13372,0 153 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13206,0 154 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 13200,0 155 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12657,0 157 0 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+GRAPHIC 12664,0 158 1 
+DESIGN ahb@adc670_tb
+VIEW struct.bd
+NO_GRAPHIC 178

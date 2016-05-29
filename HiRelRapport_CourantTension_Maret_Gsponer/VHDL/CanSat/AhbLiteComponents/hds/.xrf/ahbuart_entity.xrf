@@ -1,0 +1,51 @@
+DESIGN ahb@uart
+VIEW symbol.sb
+NO_GRAPHIC 0
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 104,0 8 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 13,0 15 1 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2839,0 20 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2452,0 21 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2514,0 22 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2519,0 23 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2692,0 24 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2494,0 25 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2464,0 26 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2474,0 27 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2651,0 28 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2469,0 29 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2504,0 30 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 2509,0 31 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 1,0 34 0 
+DESIGN ahb@uart
+VIEW symbol.sb
+GRAPHIC 1,0 35 0 

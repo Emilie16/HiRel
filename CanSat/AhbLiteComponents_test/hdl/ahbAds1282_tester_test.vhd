@@ -92,6 +92,14 @@ BEGIN
     wait until rising_edge(clock_int);
     registerWrite <= '1', '0' after clockPeriod;
     wait for 1 us;
+		
+		--EMG Modifs
+    registerAddress <= modulatorClockDividerRegisterId;
+    registerWData <= 50;
+    wait until rising_edge(clock_int);
+    registerWrite <= '1', '0' after clockPeriod;
+    wait for 1 us;
+		----
                                                   -- write value to ADC register
     registerAddress <= adcRegisterId;
     registerWData <= 16#100# * 16#01# + 16#52#;
