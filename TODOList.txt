@@ -26,7 +26,7 @@ Documentation:
 	Périphérique pour convertisseur A/D	:	Emilie	OK
 	Machine d'état du contrôleur ADC	:	Emilie	OK
 	Codage de la machine d'états		:	Emilie	OK
-	Registre à décalage			:	Emilie	
+	Registre à décalage			:	Emilie	OK
 	Machine d'état avec contraintes SEU	:	Emilie	OK
 	Décodeur de Hamming			:	Emilie	OK
 	Estimation du taux de SEU par jour	:	Emilie	OK
