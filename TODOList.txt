@@ -1,26 +1,30 @@
 Documentation:
-	Choix du capteur			:	Emilie	OK
-	Schéma bloc de la chaîne de mesure	:	Emilie	OK
 	Analyse des performances attendues	:	Yann	
 	Schéma électrique			:	Yann	
-	Budget de la chaîne de mesure		:	Emilie	OK
-	Dissipation de chaleur			:	Emilie	OK
+	Routage					:	Yann	
 	FMECA					:	Yann	
-	Analyse Monté-Carlo			:	Emilie	OK
-	Détermination des paramètres à 
-	considérer				:	Emilie OK
-	Détermination des performances à
-	analyser				:	Emilie OK
-	Évaluation des résultats		:	Emilie OK
 	Analyse de stress des composants (PSA)	:	Yann	
 	Dimmensionnement du filtre passe-bas	:	Yann	
-	Routage					:	Yann	
-	Simulation VHDL				:	Emilie	OK
-	Matrice de conformité			: 	Emilie	OK
-	Banc de test				: 	Emilie	OK
 	Circuit de mesure de rotation à 
 	redondance froide			:	Yann	
-	Nombre de pannes par milliard d'heures	:	Yann	
+	Nombre de pannes par milliard d'heures	:	Yann
+	Environnement des test			: 	Yann	
+	Plan de test				:	Yann	
+	Procédure de test			:	Yann
+
+	Choix du capteur			:	Emilie	OK
+	Schéma bloc de la chaîne de mesure	:	Emilie	OK
+	Budget de la chaîne de mesure		:	Emilie	OK
+	Dissipation de chaleur			:	Emilie	OK
+	Analyse Monté-Carlo			:	Emilie	OK
+	Détermination des paramètres à 
+	considérer				:	Emilie 	OK
+	Détermination des performances à
+	analyser				:	Emilie 	OK
+	Évaluation des résultats		:	Emilie 	OK
+	Simulation VHDL				:	Emilie	OK
+	Matrice de conformité			: 	Emilie	OK
+	Banc de test				: 	Emilie	OK	
 	Circuit AMBA				:	Emilie	OK
 	Simulation du circuit AMBA		:	Emilie	OK
 	Périphérique pour convertisseur A/D	:	Emilie	OK
@@ -30,8 +34,5 @@ Documentation:
 	Machine d'état avec contraintes SEU	:	Emilie	OK
 	Décodeur de Hamming			:	Emilie	OK
 	Estimation du taux de SEU par jour	:	Emilie	OK
-	Alimentation FPGA			:	Emilie	
-	Entrées / sorties du circuit		:	Emilie	
-	Environnement des test			: 	Yann	
-	Plan de test				:	Yann	
-	Procédure de test			:	Yann
+	Alimentation FPGA			:	Emilie	OK
+	Entrées / sorties du circuit		:	Emilie	OK
