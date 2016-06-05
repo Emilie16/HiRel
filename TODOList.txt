@@ -8,9 +8,9 @@ Documentation:
 	Circuit de mesure de rotation à 
 	redondance froide			:	Yann OK
 	Nombre de pannes par milliard d'heures	:	Yann OK
-	Environnement des test			: 	Yann	
-	Plan de test				:	Yann	
-	Procédure de test			:	Yann
+	Environnement des test			: 	Yann OK	
+	Plan de test				:	Yann OK	
+	Procédure de test			:	Yann OK
 
 	Choix du capteur			:	Emilie	OK
 	Schéma bloc de la chaîne de mesure	:	Emilie	OK
