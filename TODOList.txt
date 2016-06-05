@@ -6,8 +6,8 @@ Documentation:
 	Analyse de stress des composants (PSA)	:	Yann	
 	Dimmensionnement du filtre passe-bas	:	Yann	
 	Circuit de mesure de rotation à 
-	redondance froide			:	Yann	
-	Nombre de pannes par milliard d'heures	:	Yann
+	redondance froide			:	Yann OK
+	Nombre de pannes par milliard d'heures	:	Yann OK
 	Environnement des test			: 	Yann	
 	Plan de test				:	Yann	
 	Procédure de test			:	Yann
