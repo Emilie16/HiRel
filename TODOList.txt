@@ -3,8 +3,8 @@ Documentation:
 	Schéma électrique			:	Yann OK	
 	Routage					:	Yann OK
 	FMECA					:	Yann	
-	Analyse de stress des composants (PSA)	:	Yann	
-	Dimmensionnement du filtre passe-bas	:	Yann	
+	Analyse de stress des composants (PSA)	:	Yann OK
+	Dimmensionnement du filtre passe-bas	:	Yann OK	
 	Circuit de mesure de rotation à 
 	redondance froide			:	Yann OK
 	Nombre de pannes par milliard d'heures	:	Yann OK
