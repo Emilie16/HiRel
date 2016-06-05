@@ -1,38 +1,38 @@
 Documentation:
 	Analyse des performances attendues	:	Yann	
-	Schéma électrique			:	Yann	
-	Routage					:	Yann	
+	SchÃ©ma Ã©lectrique			:	Yann OK	
+	Routage					:	Yann OK
 	FMECA					:	Yann	
 	Analyse de stress des composants (PSA)	:	Yann	
 	Dimmensionnement du filtre passe-bas	:	Yann	
-	Circuit de mesure de rotation à 
+	Circuit de mesure de rotation Ã  
 	redondance froide			:	Yann	
 	Nombre de pannes par milliard d'heures	:	Yann
 	Environnement des test			: 	Yann	
 	Plan de test				:	Yann	
-	Procédure de test			:	Yann
+	ProcÃ©dure de test			:	Yann
 
 	Choix du capteur			:	Emilie	OK
-	Schéma bloc de la chaîne de mesure	:	Emilie	OK
-	Budget de la chaîne de mesure		:	Emilie	OK
+	SchÃ©ma bloc de la chaÃ®ne de mesure	:	Emilie	OK
+	Budget de la chaÃ®ne de mesure		:	Emilie	OK
 	Dissipation de chaleur			:	Emilie	OK
-	Analyse Monté-Carlo			:	Emilie	OK
-	Détermination des paramètres à 
-	considérer				:	Emilie 	OK
-	Détermination des performances à
+	Analyse MontÃ©-Carlo			:	Emilie	OK
+	DÃ©termination des paramÃ¨tres Ã  
+	considÃ©rer				:	Emilie 	OK
+	DÃ©termination des performances Ã 
 	analyser				:	Emilie 	OK
-	Évaluation des résultats		:	Emilie 	OK
+	Ã‰valuation des rÃ©sultats		:	Emilie 	OK
 	Simulation VHDL				:	Emilie	OK
-	Matrice de conformité			: 	Emilie	OK
+	Matrice de conformitÃ©			: 	Emilie	OK
 	Banc de test				: 	Emilie	OK	
 	Circuit AMBA				:	Emilie	OK
 	Simulation du circuit AMBA		:	Emilie	OK
-	Périphérique pour convertisseur A/D	:	Emilie	OK
-	Machine d'état du contrôleur ADC	:	Emilie	OK
-	Codage de la machine d'états		:	Emilie	OK
-	Registre à décalage			:	Emilie	OK
-	Machine d'état avec contraintes SEU	:	Emilie	OK
-	Décodeur de Hamming			:	Emilie	OK
+	PÃ©riphÃ©rique pour convertisseur A/D	:	Emilie	OK
+	Machine d'Ã©tat du contrÃ´leur ADC	:	Emilie	OK
+	Codage de la machine d'Ã©tats		:	Emilie	OK
+	Registre Ã  dÃ©calage			:	Emilie	OK
+	Machine d'Ã©tat avec contraintes SEU	:	Emilie	OK
+	DÃ©codeur de Hamming			:	Emilie	OK
 	Estimation du taux de SEU par jour	:	Emilie	OK
 	Alimentation FPGA			:	Emilie	OK
-	Entrées / sorties du circuit		:	Emilie	OK
+	EntrÃ©es / sorties du circuit		:	Emilie	OK
