@@ -2,7 +2,7 @@ Documentation:
 	Analyse des performances attendues	:	Yann	
 	Schéma électrique			:	Yann OK	
 	Routage					:	Yann OK
-	FMECA					:	Yann	
+	FMECA					:	Yann OK	
 	Analyse de stress des composants (PSA)	:	Yann OK
 	Dimmensionnement du filtre passe-bas	:	Yann OK	
 	Circuit de mesure de rotation à 
