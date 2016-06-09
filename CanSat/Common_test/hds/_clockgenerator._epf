@@ -1,2 +1,0 @@
-DEFAULT_FILE atom clockGenerator_sim.vhd
-DEFAULT_ARCHITECTURE atom sim
